@@ -1,3 +1,4 @@
+// app/sitemap.ts
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -106,6 +107,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-]
-
+  ]
 }
+
+// Add this for static export compatibility
+export const dynamic = 'force-static'
