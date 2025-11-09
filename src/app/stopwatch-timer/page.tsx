@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import CountdownTimer from '@/components/utilities/timer/CountdownTimer'
-import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
+import CountdownTimer from './../../components/utilities/timer/CountdownTimer'
+import Header from './../../components/layout/Header'
+import Footer from './../../components/layout/Footer'
 
 // Import icons separately to avoid server component issues
 import { 

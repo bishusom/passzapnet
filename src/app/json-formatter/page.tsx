@@ -1,9 +1,9 @@
 // app/json-formatter/page.tsx
 import type { Metadata } from 'next';
 import { Code, Shield, Zap, Copy, CheckCircle, AlertCircle, FileText } from 'lucide-react';
-import JsonFormatter from '@/components/utilities/json/JsonFormatter';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import JsonFormatter from './../../components/utilities/json/JsonFormatter';
+import Header from './../../components/layout/Header';
+import Footer from './../../components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'JSON Formatter & Validator - Beautify and Validate JSON Online | PassZap',

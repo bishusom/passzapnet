@@ -1,9 +1,9 @@
 // app/javascript-minifier/page.tsx
 import type { Metadata } from 'next';
 import { Code, Zap, FileCode, Download, Copy, Shield } from 'lucide-react';
-import JavascriptMinifier from '@/components/utilities/minifiers/JavascriptMinifier';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import JavascriptMinifier from './../../components/utilities/minifiers/JavascriptMinifier';
+import Header from './../../components/layout/Header';
+import Footer from './../../components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'JavaScript Minifier - Minify and Compress JS Online | PassZap',

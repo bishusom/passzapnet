@@ -1,9 +1,9 @@
 // app/qr-code-generator/page.tsx
 import type { Metadata } from 'next';
 import { QrCode, Shield, Zap, Download, Copy, Scan, Palette } from 'lucide-react';
-import QrCodeGenerator from '@/components/utilities/qrcode/QrCodeGenerator';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import QrCodeGenerator from './../../components/utilities/qrcode/QrCodeGenerator';
+import Header from './../../components/layout/Header';
+import Footer from './../../components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'QR Code Generator - Create Custom QR Codes Online | PassZap',

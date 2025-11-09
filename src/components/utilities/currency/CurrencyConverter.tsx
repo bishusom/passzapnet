@@ -2,7 +2,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { CURRENCIES } from '@/lib/currencies';
+import { CURRENCIES } from './../../../lib/currencies';
 import { 
   RefreshCw, 
   ArrowUpDown, 

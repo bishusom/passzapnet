@@ -1,7 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { GoogleAnalytics } from '@next/third-parties/google';
-import { Breadcrumbs, SeoBreadcrumbs } from '@/components/layout/Breadcrumbs'; 
+import { Breadcrumbs, SeoBreadcrumbs } from './../components/layout/Breadcrumbs'; 
 
 export const metadata: Metadata = {
   title: 'PassZap - Free Online Utilities & Tools for Developers',

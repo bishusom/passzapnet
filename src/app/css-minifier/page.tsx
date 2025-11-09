@@ -1,9 +1,9 @@
 // app/css-minifier/page.tsx
 import type { Metadata } from 'next';
 import { Code, Zap, FileCode, Download, Copy, Shield } from 'lucide-react';
-import CssMinifier from '@/components/utilities/minifiers/CssFormatter';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import CssMinifier from './../../components/utilities/minifiers/CssFormatter';
+import Header from './../../components/layout/Header';
+import Footer from './../../components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'CSS Minifier - Minify and Compress CSS Online | PassZap',

@@ -1,8 +1,8 @@
 // app/faq/page.tsx
 import type { Metadata } from 'next';
 import { HelpCircle, Search, FileText, Code, Shield, Download } from 'lucide-react';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import Header from './../../components/layout/Header';
+import Footer from './../../components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions - PassZap Tools',

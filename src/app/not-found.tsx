@@ -2,8 +2,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Home, Search, ArrowRight, FileQuestion, Zap } from 'lucide-react';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import Header from './../components/layout/Header';
+import Footer from './../components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'Page Not Found - 404 Error | PassZap',

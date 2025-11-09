@@ -1,8 +1,8 @@
 // app/terms-of-service/page.tsx
 import type { Metadata } from 'next';
 import { FileText, Scale, AlertTriangle, CheckCircle, Shield } from 'lucide-react';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import Header from './../../components/layout/Header';
+import Footer from './../../components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'Terms of Service - PassZap Tools',

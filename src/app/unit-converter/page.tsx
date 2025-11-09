@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { Ruler, ArrowLeftRight } from 'lucide-react'
-import UnitsConverter from '@/components/utilities/units/UnitsConverter'
-import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
+import UnitsConverter from './../../components/utilities/units/UnitsConverter'
+import Header from './../../components/layout/Header'
+import Footer from './../../components/layout/Footer'
 
 export const metadata: Metadata = {
   title: 'Unit Converter - Convert Length, Weight, Temperature & More | PassZap',

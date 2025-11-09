@@ -1,9 +1,9 @@
 // app/file-hash-generator/page.tsx
 import type { Metadata } from 'next';
 import { Hash, Shield, Lock, Download, FileText, Cpu } from 'lucide-react';
-import FileHashGenerator from '@/components/utilities/filehash/FileHashGenerator';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import FileHashGenerator from './../../components/utilities/filehash/FileHashGenerator';
+import Header from './../../components/layout/Header';
+import Footer from './../../components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'File Hash Generator - Calculate MD5, SHA-1, SHA-256 Hashes | PassZap',

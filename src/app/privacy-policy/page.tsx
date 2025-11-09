@@ -1,8 +1,8 @@
 // app/privacy-policy/page.tsx
 import type { Metadata } from 'next';
 import { Shield, Lock, Eye, User, Mail, Database } from 'lucide-react';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import Header from './../../components/layout/Header';
+import Footer from './../../components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy - PassZap Tools',

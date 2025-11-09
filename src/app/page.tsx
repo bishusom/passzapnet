@@ -1,12 +1,11 @@
 'use client'
 
-import { useState, useCallback, useEffect } from 'react'
 import { Sparkles, Shield, Users, Globe } from 'lucide-react'
-import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
-import ToolCard from '@/components/ui/ToolCard'
-import { utilities } from '@/lib/constants'
-import PasswordGenerator from '@/components/utilities/password/PasswordGenerator'
+import Header from './../components/layout/Header'
+import Footer from './../components/layout/Footer'
+import ToolCard from './../components/ui/ToolCard'
+import { utilities } from './../lib/constants'
+import PasswordGenerator from './../components/utilities/password/PasswordGenerator'
 
 export default function Home() {
   return (

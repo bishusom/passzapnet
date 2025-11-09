@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { Key, Shield, Lock, Users, Zap } from 'lucide-react'
-import PasswordGenerator from '@/components/utilities/password/PasswordGenerator'
-import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
+import PasswordGenerator from './../../components/utilities/password/PasswordGenerator'
+import Header from './../../components/layout/Header'
+import Footer from './../../components/layout/Footer'
 
 export const metadata: Metadata = {
   title: 'Password Generator - Create Strong & Secure Passwords | PassZap',

@@ -1,9 +1,9 @@
 // app/currency-converter/page.tsx
 import type { Metadata } from 'next';
 import { TrendingUp, Shield, Zap, RefreshCw, Globe, Calculator } from 'lucide-react';
-import CurrencyConverter from '@/components/utilities/currency/CurrencyConverter';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import CurrencyConverter from './../../components/utilities/currency/CurrencyConverter';
+import Header from './../../components/layout/Header';
+import Footer from './../../components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'Currency Converter - Real-Time Exchange Rates | PassZap',

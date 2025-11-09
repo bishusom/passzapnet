@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { Calculator, FunctionSquare, Code2, History } from 'lucide-react'
-import CalculatorComponent from '@/components/utilities/calculator/CalculatorComponent'
-import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
+import CalculatorComponent from './../../components/utilities/calculator/CalculatorComponent'
+import Header from './../../components/layout/Header'
+import Footer from './../../components/layout/Footer'
 
 export const metadata: Metadata = {
   title: 'Calculator - Scientific, Basic & Programming Modes | PassZap',

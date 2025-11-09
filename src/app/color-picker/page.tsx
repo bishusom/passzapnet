@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { Palette, Droplets, Contrast, Eye, Palette as PaletteIcon } from 'lucide-react'
-import ColorPicker from '@/components/utilities/color/ColorPicker'
-import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
+import ColorPicker from './../../components/utilities/color/ColorPicker'
+import Header from './../../components/layout/Header'
+import Footer from './../../components/layout/Footer'
 
 export const metadata: Metadata = {
   title: 'Color Picker - RGB, HEX, HSL Converter & Palette Generator | PassZap',

@@ -1,9 +1,9 @@
 // app/base64-encoder/page.tsx
 import type { Metadata } from 'next';
 import { Code, Shield, Zap, Copy, RotateCcw, CheckCircle } from 'lucide-react';
-import Base64Tool from '@/components/utilities/base64/Base64Tool';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import Base64Tool from './../../components/utilities/base64/Base64Tool';
+import Header from './../../components/layout/Header';
+import Footer from './../../components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'Base64 Encoder & Decoder - Online Text & File Converter | PassZap',
