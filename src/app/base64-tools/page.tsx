@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: 'PassZap',
     images: [
       {
-        url: '/og/base64-encoder-og.jpg',
+        url: '/og/base64-encoder-og.png',
         width: 1200,
         height: 630,
         alt: 'PassZap Base64 Encoder & Decoder',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Base64 Encoder & Decoder - Online Text & File Converter | PassZap',
     description: 'Free online Base64 encoder and decoder tool. Convert text, files, and images to Base64 format instantly.',
-    images: ['/og/base64-encoder-og.jpg'],
+    images: ['/og/base64-encoder-og.png'],
   },
   alternates: {
     canonical: 'https://passzap.net/base64-encoder',

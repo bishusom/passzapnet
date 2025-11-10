@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: 'PassZap',
     images: [
       {
-        url: '/og/unit-converter-og.jpg',
+        url: '/og/unit-converter-og.png',
         width: 1200,
         height: 630,
         alt: 'PassZap Unit Converter',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Unit Converter - Convert Length, Weight, Temperature & More | PassZap',
     description: 'Free online unit converter for length, weight, temperature, area, volume, speed, time, and digital storage. Convert between metric, imperial, and US customary units.',
-    images: ['/og/unit-converter-og.jpg'],
+    images: ['/og/unit-converter-og.png'],
   },
   alternates: {
     canonical: 'https://passzap.net/unit-converter',

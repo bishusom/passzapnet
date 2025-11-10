@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useCallback } from 'react'
-import { Copy, Check, RefreshCw } from 'lucide-react'
+import { Copy, Check, RefreshCw, Eye, EyeOff } from 'lucide-react'
 
 interface PassphraseGeneratorProps {
   onPasswordGenerated: (password: string) => void
@@ -13,7 +13,10 @@ export default function PassphraseGenerator({ onPasswordGenerated }: PassphraseG
   const [separator, setSeparator] = useState('-')
   const [capitalize, setCapitalize] = useState(true)
   const [includeNumbers, setIncludeNumbers] = useState(false)
+  const [useSpecialChars, setUseSpecialChars] = useState(false)
+  const [specialCharLevel, setSpecialCharLevel] = useState('moderate') // 'light', 'moderate', 'heavy'
   const [copied, setCopied] = useState(false)
+  const [showSubstitutionGuide, setShowSubstitutionGuide] = useState(false)
 
   const wordList = [
     'apple', 'brave', 'cloud', 'dance', 'eagle', 'flame', 'globe', 'heart',
@@ -22,13 +25,66 @@ export default function PassphraseGenerator({ onPasswordGenerated }: PassphraseG
     'young', 'zesty', 'amber', 'blaze', 'crisp', 'dream', 'earth', 'frost',
     'giant', 'haven', 'ideal', 'jewel', 'king', 'lucky', 'magic', 'noble',
     'olive', 'pearl', 'quick', 'royal', 'smart', 'true', 'urban', 'vital',
-    'wonder', 'zebra'
+    'wonder', 'zebra', 'alpha', 'beta', 'gamma', 'delta', 'echo', 'foxtrot'
   ]
+
+  // Common leet speak substitutions that are easy to remember
+  const leetSubstitutions: Record<string, string[]> = {
+    'a': ['@', '4'],
+    'e': ['3'],
+    'i': ['1', '!'],
+    'o': ['0'],
+    's': ['$', '5'],
+    't': ['7'],
+    'l': ['1'],
+    'g': ['9'],
+    'b': ['8']
+  }
+
+  const applyLeetSubstitutions = (word: string, level: string): string => {
+    if (level === 'light') {
+      // Only substitute 1-2 common letters
+      const substitutions = ['s', 'a', 'e']
+      const targetLetter = substitutions[Math.floor(Math.random() * substitutions.length)]
+      return word.replace(new RegExp(targetLetter, 'g'), leetSubstitutions[targetLetter]?.[0] || targetLetter)
+    } else if (level === 'moderate') {
+      // Substitute 2-3 letters
+      let result = word
+      const lettersToSubstitute = Object.keys(leetSubstitutions)
+        .filter(letter => word.includes(letter))
+        .slice(0, 2 + Math.floor(Math.random() * 2))
+      
+      lettersToSubstitute.forEach(letter => {
+        const substitutions = leetSubstitutions[letter]
+        if (substitutions) {
+          result = result.replace(new RegExp(letter, 'g'), substitutions[0])
+        }
+      })
+      return result
+    } else {
+      // Heavy substitution - more aggressive but still readable
+      let result = word
+      Object.keys(leetSubstitutions).forEach(letter => {
+        if (word.includes(letter) && Math.random() > 0.3) {
+          const substitutions = leetSubstitutions[letter]
+          if (substitutions) {
+            result = result.replace(new RegExp(letter, 'g'), substitutions[0])
+          }
+        }
+      })
+      return result
+    }
+  }
 
   const generatePassphrase = useCallback(() => {
     const selectedWords = []
     for (let i = 0; i < phraseWords; i++) {
       let word = wordList[Math.floor(Math.random() * wordList.length)]
+      
+      if (useSpecialChars) {
+        word = applyLeetSubstitutions(word, specialCharLevel)
+      }
+      
       if (capitalize) {
         word = word.charAt(0).toUpperCase() + word.slice(1)
       }
@@ -48,7 +104,7 @@ export default function PassphraseGenerator({ onPasswordGenerated }: PassphraseG
 
     setPassphrase(result)
     onPasswordGenerated(result)
-  }, [phraseWords, separator, capitalize, includeNumbers, onPasswordGenerated])
+  }, [phraseWords, separator, capitalize, includeNumbers, useSpecialChars, specialCharLevel, onPasswordGenerated])
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(passphrase)
@@ -56,9 +112,18 @@ export default function PassphraseGenerator({ onPasswordGenerated }: PassphraseG
     setTimeout(() => setCopied(false), 2000)
   }
 
+  const getSubstitutionExamples = () => {
+    const examples = [
+      { original: "apple", light: "apple", moderate: "@pple", heavy: "@pp!3" },
+      { original: "brave", light: "brave", moderate: "br@ve", heavy: "8r@v3" },
+      { original: "cloud", light: "cloud", moderate: "cl0ud", heavy: "c!0ud" }
+    ]
+    return examples
+  }
+
   return (
     <div className="space-y-6">
-      {/* REMOVED THE DUPLICATE OUTPUT SECTION - Only keep this one */}
+      {/* Output Section */}
       <div className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl p-6 border border-emerald-200">
         <div className="flex items-center justify-between mb-4">
           <span className="text-sm font-medium text-gray-700">Generated Passphrase</span>
@@ -141,8 +206,81 @@ export default function PassphraseGenerator({ onPasswordGenerated }: PassphraseG
             />
             <span className="text-sm font-medium text-gray-700">Include numbers</span>
           </label>
+
+          <label className="flex items-center space-x-3 p-3 bg-white border border-gray-200 rounded-lg hover:border-emerald-300 transition-colors cursor-pointer shadow-sm">
+            <input
+              type="checkbox"
+              checked={useSpecialChars}
+              onChange={(e) => setUseSpecialChars(e.target.checked)}
+              className="w-4 h-4 text-emerald-500 bg-white border-gray-300 rounded focus:ring-emerald-500 focus:ring-2"
+            />
+            <span className="text-sm font-medium text-gray-700">Use special characters</span>
+          </label>
         </div>
       </div>
+
+      {/* Special Character Options */}
+      {useSpecialChars && (
+        <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-3">
+            <h4 className="text-sm font-semibold text-purple-900">Special Character Strength</h4>
+            <button
+              onClick={() => setShowSubstitutionGuide(!showSubstitutionGuide)}
+              className="flex items-center space-x-1 text-purple-600 hover:text-purple-700 text-sm"
+            >
+              {showSubstitutionGuide ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+              <span>{showSubstitutionGuide ? 'Hide Guide' : 'Show Guide'}</span>
+            </button>
+          </div>
+
+          <div className="grid grid-cols-3 gap-2 mb-3">
+            {['light', 'moderate', 'heavy'].map((level) => (
+              <button
+                key={level}
+                onClick={() => setSpecialCharLevel(level)}
+                className={`p-2 text-sm rounded-lg transition-colors ${
+                  specialCharLevel === level
+                    ? 'bg-purple-500 text-white shadow-sm'
+                    : 'bg-white text-purple-700 border border-purple-200 hover:border-purple-300'
+                }`}
+              >
+                {level.charAt(0).toUpperCase() + level.slice(1)}
+              </button>
+            ))}
+          </div>
+
+          {showSubstitutionGuide && (
+            <div className="bg-white rounded-lg p-3 border border-purple-100">
+              <h5 className="text-xs font-semibold text-purple-800 mb-2">Substitution Examples:</h5>
+              <div className="space-y-1 text-xs text-purple-700">
+                {getSubstitutionExamples().map((example, index) => (
+                  <div key={index} className="flex justify-between">
+                    <span>{example.original} →</span>
+                    <div className="space-x-2">
+                      <span className={specialCharLevel === 'light' ? 'font-bold text-purple-900' : ''}>
+                        {example.light}
+                      </span>
+                      <span className={specialCharLevel === 'moderate' ? 'font-bold text-purple-900' : ''}>
+                        {example.moderate}
+                      </span>
+                      <span className={specialCharLevel === 'heavy' ? 'font-bold text-purple-900' : ''}>
+                        {example.heavy}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-2 text-xs text-purple-600">
+                <strong>Common substitutions:</strong> a→@, e→3, i→1, o→0, s→$, t→7
+              </div>
+            </div>
+          )}
+
+          <p className="text-xs text-purple-600 mt-2">
+            <strong>Tip:</strong> Special characters make passwords stronger while keeping them memorable through common patterns (like "s" → "$").
+          </p>
+        </div>
+      )}
 
       <button
         onClick={generatePassphrase}
@@ -196,6 +334,7 @@ export default function PassphraseGenerator({ onPasswordGenerated }: PassphraseG
           <li>• <strong>More entropy</strong> - Each word adds significant randomness</li>
           <li>• <strong>Resistant to dictionary attacks</strong> - When using uncommon word combinations</li>
           <li>• <strong>Type-friendly</strong> - Easy to type on mobile and desktop</li>
+          <li>• <strong>Meets requirements</strong> - With special characters, satisfies most website rules</li>
         </ul>
       </div>
     </div>

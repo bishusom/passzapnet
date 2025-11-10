@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: 'PassZap',
     images: [
       {
-        url: '/og/color-picker-og.jpg',
+        url: '/og/color-picker-og.png',
         width: 1200,
         height: 630,
         alt: 'PassZap Base64 Encoder & Decoder',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Base64 Encoder & Decoder - Online Text & File Converter | PassZap',
     description: 'Advanced color picker with RGB, HEX, HSL conversion, color palette generation, contrast checking, and accessibility tools. Perfect for designers and developers',
-    images: ['/og/base64-encoder-og.jpg'],
+    images: ['/og/color-picker-og.png'],
   },
   alternates: {
     canonical: 'https://passzap.net/color-picker',

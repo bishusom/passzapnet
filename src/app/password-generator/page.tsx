@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: 'PassZap',
     images: [
       {
-        url: '/og/password-generator-og.jpg',
+        url: '/og/password-generator-og.png',
         width: 1200,
         height: 630,
         alt: 'PassZap Password Generator',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Password Generator - Create Strong & Secure Passwords | PassZap',
     description: 'Free online password generator tool. Create strong, secure passwords and memorable passphrases with local processing. No data stored.',
-    images: ['/og/password-generator-og.jpg'],
+    images: ['/og/password-generator-og.png'],
   },
   alternates: {
     canonical: 'https://passzap.net/password-generator',

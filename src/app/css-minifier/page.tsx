@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: 'PassZap',
     images: [
       {
-        url: '/og/css-minifier-og.jpg',
+        url: '/og/css-minifier-og.png',
         width: 1200,
         height: 630,
         alt: 'PassZap CSS Minifier',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'CSS Minifier - Minify and Compress CSS Online | PassZap',
     description: 'Free online CSS minifier tool. Compress and optimize your CSS files by removing whitespace, comments, and unnecessary characters.',
-    images: ['/og/css-minifier-og.jpg'],
+    images: ['/og/css-minifier-og.png'],
   },
   alternates: {
     canonical: 'https://passzap.net/css-minifier',

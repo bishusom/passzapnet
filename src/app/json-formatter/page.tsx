@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: 'PassZap',
     images: [
       {
-        url: '/og/json-formatter-og.jpg',
+        url: '/og/json-formatter-og.png',
         width: 1200,
         height: 630,
         alt: 'PassZap JSON Formatter & Validator',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'JSON Formatter & Validator - Beautify and Validate JSON Online | PassZap',
     description: 'Free online JSON formatter, validator, and beautifier tool. Format, validate, and minify JSON data.',
-    images: ['/og/json-formatter-og.jpg'],
+    images: ['/og/json-formatter-og.png'],
   },
   alternates: {
     canonical: 'https://passzap.net/json-formatter',

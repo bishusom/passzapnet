@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: 'PassZap',
     images: [
       {
-        url: '/og/qr-code-generator-og.jpg',
+        url: '/og/qrcode-generator-og.png',
         width: 1200,
         height: 630,
         alt: 'PassZap QR Code Generator',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'QR Code Generator - Create Custom QR Codes Online | PassZap',
     description: 'Free online QR code generator. Create custom QR codes for URLs, text, contact info, WiFi, and more.',
-    images: ['/og/qr-code-generator-og.jpg'],
+    images: ['/og/qrcode-generator-og.png'],
   },
   alternates: {
     canonical: 'https://passzap.net/qr-code-generator',

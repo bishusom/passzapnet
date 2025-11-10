@@ -68,6 +68,7 @@ export default function Home() {
             {utilities.map((utility) => (
               <ToolCard key={utility.name} {...utility} />
             ))}
+
           </div>
         </div>
       </section>

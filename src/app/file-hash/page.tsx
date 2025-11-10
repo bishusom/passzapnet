@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: 'PassZap',
     images: [
       {
-        url: '/og/file-hash-generator-og.jpg',
+        url: '/og/file-hash-generator-og.png',
         width: 1200,
         height: 630,
         alt: 'PassZap File Hash Generator',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'File Hash Generator - Calculate MD5, SHA-1, SHA-256 Hashes | PassZap',
     description: 'Free online file hash generator. Calculate MD5, SHA-1, SHA-256, and other hash values for files.',
-    images: ['/og/file-hash-generator-og.jpg'],
+    images: ['/og/file-hash-generator-og.png'],
   },
   alternates: {
     canonical: 'https://passzap.net/file-hash-generator',

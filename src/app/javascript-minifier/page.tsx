@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: 'PassZap',
     images: [
       {
-        url: '/og/javascript-minifier-og.jpg',
+        url: '/og/javascript-minifier-og.png',
         width: 1200,
         height: 630,
         alt: 'PassZap JavaScript Minifier',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'JavaScript Minifier - Minify and Compress JS Online | PassZap',
     description: 'Free online JavaScript minifier tool. Compress and optimize your JS files by removing whitespace, comments, and shortening variables.',
-    images: ['/og/javascript-minifier-og.jpg'],
+    images: ['/og/javascript-minifier-og.png'],
   },
   alternates: {
     canonical: 'https://passzap.net/javascript-minifier',

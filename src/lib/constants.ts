@@ -1,7 +1,8 @@
 // constants.ts
 import { 
   Lock, Clock, Calculator, Palette, DollarSign, Code, 
-  FileText, Hash, Ruler, QrCode, Braces 
+  FileText, Hash, Ruler, QrCode, Braces,
+  Terminal, FileCode, Zap
 } from 'lucide-react'
 
 export const utilities = [
@@ -73,7 +74,7 @@ export const utilities = [
     name: 'JavaScript Minifier',
     description: 'Minify and format JavaScript code',
     href: '/javascript-minifier',
-    icon: Code,
+    icon: FileCode,
     color: 'text-white',
     bgColor: 'bg-emerald-500'
   },
@@ -100,5 +101,38 @@ export const utilities = [
     icon: FileText,
     color: 'text-white',
     bgColor: 'bg-emerald-500'
+  },
+  // Add cheat sheets as individual utilities
+  {
+    name: 'Bash Cheat Sheet',
+    description: 'Essential terminal commands and one-liners',
+    href: '/cheatsheets/bash',
+    icon: Terminal,
+    color: 'text-white',
+    bgColor: 'bg-emerald-500'
+  },
+  {
+    name: 'Sed & Awk Cheat Sheet',
+    description: 'Powerful text processing commands',
+    href: '/cheatsheets/sed-awk',
+    icon: FileCode,
+    color: 'text-white',
+    bgColor: 'bg-emerald-500'
+  },
+  {
+    name: 'Python Cheat Sheet',
+    description: 'Quick Python snippets for common tasks',
+    href: '/cheatsheets/python',
+    icon: Braces,
+    color: 'text-white',
+    bgColor: 'bg-emerald-500'
+  },
+  {
+    name: 'PowerShell Cheat Sheet',
+    description: 'Windows administration commands',
+    href: '/cheatsheets/powershell',
+    icon: Zap,
+    color: 'text-white',
+    bgColor: 'bg-emerald-500'
   }
-] as const
+] as const;

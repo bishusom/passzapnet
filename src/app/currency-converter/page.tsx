@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: 'PassZap',
     images: [
       {
-        url: '/og/currency-converter-og.jpg',
+        url: '/og/currency-converter-og.png',
         width: 1200,
         height: 630,
         alt: 'PassZap Currency Converter - Real-Time Exchange Rates',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Currency Converter - Real-Time Exchange Rates | PassZap',
     description: 'Free real-time currency converter with live exchange rates. Convert between 150+ currencies.',
-    images: ['/og/currency-converter-og.jpg'],
+    images: ['/og/currency-converter-og.png'],
   },
   alternates: {
     canonical: 'https://passzap.net/currency-converter',

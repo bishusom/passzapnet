@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: 'PassZap',
     images: [
       {
-        url: '/og/stopwatch-timer-og.jpg',
+        url: '/og/stopwatch-timer-og.png',
         width: 1200,
         height: 630,
         alt: 'PassZap Countdown Timer & Stopwatch',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Countdown Timer & Stopwatch - Full Screen Projection | PassZap',
     description: 'Free online countdown timer and stopwatch with full screen mode. Perfect for presentations, meetings, classrooms, and cooking. No installation required.',
-    images: ['/og/stopwatch-timer-og.jpg'],
+    images: ['/og/stopwatch-timer-og.png'],
   },
   alternates: {
     canonical: 'https://passzap.net/stopwatch-timer',
