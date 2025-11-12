@@ -2,6 +2,7 @@
 import { 
   Lock, Clock, Calculator, Palette, DollarSign, Code, 
   FileText, Hash, Ruler, QrCode, Braces,
+  FileImage, Scaling, RefreshCw, Eye,
   Terminal, FileCode, Zap
 } from 'lucide-react'
 
@@ -31,6 +32,14 @@ export const utilities = [
     bgColor: 'bg-emerald-500'
   },
   {
+    name: 'Currency Converter',
+    description: 'Real-time exchange rates',
+    href: '/currency-converter',
+    icon: DollarSign,
+    color: 'text-white',
+    bgColor: 'bg-emerald-500'
+  },
+  {
     name: 'Calculator',
     description: 'Advanced scientific calculator',
     href: '/calculator',
@@ -47,10 +56,10 @@ export const utilities = [
     bgColor: 'bg-emerald-500'
   },
   {
-    name: 'Currency Converter',
-    description: 'Real-time exchange rates',
-    href: '/currency-converter',
-    icon: DollarSign,
+    name: 'QR Code Generator',
+    description: 'Create custom QR codes',
+    href: '/qr-generator',
+    icon: QrCode,
     color: 'text-white',
     bgColor: 'bg-emerald-500'
   },
@@ -79,14 +88,6 @@ export const utilities = [
     bgColor: 'bg-emerald-500'
   },
   {
-    name: 'QR Code Generator',
-    description: 'Create custom QR codes',
-    href: '/qr-generator',
-    icon: QrCode,
-    color: 'text-white',
-    bgColor: 'bg-emerald-500'
-  },
-  {
     name: 'File Hash Generator',
     description: 'Generate file checksums',
     href: '/file-hash',
@@ -99,6 +100,38 @@ export const utilities = [
     description: 'Minify and format CSS code',
     href: '/css-minifier',
     icon: FileText,
+    color: 'text-white',
+    bgColor: 'bg-emerald-500'
+  },
+  {
+    name: 'Image Format Converter',
+    description: 'Convert between image formats',
+    href: '/image-tools/format-converter',
+    icon: RefreshCw, // You'll need to import this
+    color: 'text-white',
+    bgColor: 'bg-emerald-500'
+  },
+  {
+    name: 'Image Resizer',
+    description: 'Resize and compress images in browser',
+    href: '/image-tools/image-resizer',
+    icon: Scaling, // You'll need to import this
+    color: 'text-white',
+    bgColor: 'bg-emerald-500'
+  },
+  {
+    name: 'Metadata Viewer',
+    description: 'View and strip image metadata',
+    href: '/image-tools/metadata-viewer',
+    icon: Eye, // You'll need to import this
+    color: 'text-white',
+    bgColor: 'bg-emerald-500'
+  },
+  {
+    name: 'Image to Base64 Converter',
+    description: 'Convert images to Base64 strings',
+    href: '/image-tools/image-to-base64',
+    icon: FileImage, // You'll need to import this
     color: 'text-white',
     bgColor: 'bg-emerald-500'
   },
