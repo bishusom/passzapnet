@@ -51,11 +51,26 @@ export default function IpToolsTool() {
 
   const fetchMyIp = async () => {
     try {
-      const response = await fetch('http://ip-api.com/json/');
+      const response = await fetch('https://ipwho.is/');
       const data = await response.json();
-      if (data.status === 'success') {
-        setMyIp(data.query);
-        setMyIpInfo(data); // Store user's IP info separately
+      if (data.success) {
+        setMyIp(data.ip);
+        setMyIpInfo({
+          status: 'success',
+          country: data.country,
+          countryCode: data.country_code,
+          region: data.region_code,
+          regionName: data.region,
+          city: data.city,
+          zip: data.postal,
+          lat: data.latitude,
+          lon: data.longitude,
+          timezone: data.timezone?.id,
+          isp: data.connection?.isp,
+          org: data.connection?.org,
+          as: data.connection?.asn,
+          query: data.ip
+        });
       }
     } catch (error) {
       console.error('Failed to fetch IP:', error);
@@ -69,11 +84,26 @@ export default function IpToolsTool() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`http://ip-api.com/json/${targetIp}?fields=status,message,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,query`);
+      const response = await fetch(`https://ipwho.is/${targetIp}`);
       const data = await response.json();
       
-      if (data.status === 'success') {
-        setLookupResult(data);
+      if (data.success) {
+        setLookupResult({
+          status: 'success',
+          country: data.country,
+          countryCode: data.country_code,
+          region: data.region_code,
+          regionName: data.region,
+          city: data.city,
+          zip: data.postal,
+          lat: data.latitude,
+          lon: data.longitude,
+          timezone: data.timezone?.id,
+          isp: data.connection?.isp,
+          org: data.connection?.org,
+          as: data.connection?.asn,
+          query: data.ip
+        });
       } else {
         setError(data.message || 'IP lookup failed');
       }
@@ -84,6 +114,7 @@ export default function IpToolsTool() {
       setLoading(false);
     }
   };
+
 
   const validateIpFormat = (ip: string) => {
     if (!ip) {
