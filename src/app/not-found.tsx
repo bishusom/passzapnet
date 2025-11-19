@@ -2,8 +2,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Home, Search, ArrowRight, FileQuestion, Zap } from 'lucide-react';
-import Header from './../components/layout/Header';
-import Footer from './../components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'Page Not Found - 404 Error | PassZap',
@@ -20,7 +18,6 @@ export default function NotFound() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
-      <Header />
       
       <main className="flex-grow py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -129,7 +126,6 @@ export default function NotFound() {
         </div>
       </main>
 
-      <Footer />
     </div>
   );
 }

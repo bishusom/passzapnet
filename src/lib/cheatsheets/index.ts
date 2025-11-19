@@ -1,4 +1,4 @@
-import { FileCode, Terminal, Braces, Zap } from 'lucide-react';
+import { Braces, Container, FileCode, GitBranch, Regex, Terminal, Zap } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 export interface CheatSheet {
@@ -1342,6 +1342,846 @@ export const cheatSheets: CheatSheet[] = [
         code: 'Clear-History',
         description: 'Clear command history',
         category: 'Console'
+      }
+    ]
+  },  
+  {
+    title: 'Git Commands',
+    description: 'Essential Git commands for version control and collaboration',
+    icon: GitBranch,
+    slug: 'git',
+    items: [
+      {
+        title: 'Clone repository',
+        code: 'git clone https://github.com/user/repo.git',
+        description: 'Clone a remote repository to local machine',
+        category: 'Repository'
+      },
+      {
+        title: 'Initialize new repo',
+        code: 'git init',
+        description: 'Initialize a new Git repository',
+        category: 'Repository'
+      },
+      {
+        title: 'Check status',
+        code: 'git status',
+        description: 'Show the working tree status',
+        category: 'Basic'
+      },
+      {
+        title: 'Add files to staging',
+        code: 'git add .',
+        description: 'Add all changes to staging area',
+        category: 'Staging'
+      },
+      {
+        title: 'Commit changes',
+        code: 'git commit -m "Commit message"',
+        description: 'Commit staged changes with a message',
+        category: 'Committing'
+      },
+      {
+        title: 'View commit history',
+        code: 'git log --oneline',
+        description: 'Show commit history in compact format',
+        category: 'History'
+      },
+      {
+        title: 'Create branch',
+        code: 'git branch feature-branch',
+        description: 'Create a new branch',
+        category: 'Branching'
+      },
+      {
+        title: 'Switch branch',
+        code: 'git checkout feature-branch',
+        description: 'Switch to another branch',
+        category: 'Branching'
+      },
+      {
+        title: 'Create and switch branch',
+        code: 'git checkout -b feature-branch',
+        description: 'Create and switch to new branch',
+        category: 'Branching'
+      },
+      {
+        title: 'Merge branch',
+        code: 'git merge feature-branch',
+        description: 'Merge feature branch into current branch',
+        category: 'Merging'
+      },
+      {
+        title: 'Pull updates',
+        code: 'git pull origin main',
+        description: 'Fetch and merge changes from remote',
+        category: 'Remote'
+      },
+      {
+        title: 'Push changes',
+        code: 'git push origin main',
+        description: 'Push local commits to remote repository',
+        category: 'Remote'
+      },
+      {
+        title: 'View remote URLs',
+        code: 'git remote -v',
+        description: 'Show remote repository URLs',
+        category: 'Remote'
+      },
+      {
+        title: 'Add remote',
+        code: 'git remote add origin https://github.com/user/repo.git',
+        description: 'Add a new remote repository',
+        category: 'Remote'
+      },
+      {
+        title: 'View changes',
+        code: 'git diff',
+        description: 'Show unstaged changes since last commit',
+        category: 'Changes'
+      },
+      {
+        title: 'View staged changes',
+        code: 'git diff --staged',
+        description: 'Show staged changes',
+        category: 'Changes'
+      },
+      {
+        title: 'Remove file from staging',
+        code: 'git reset HEAD file.txt',
+        description: 'Unstage a file',
+        category: 'Staging'
+      },
+      {
+        title: 'Discard local changes',
+        code: 'git checkout -- file.txt',
+        description: 'Discard changes in working directory',
+        category: 'Changes'
+      },
+      {
+        title: 'Stash changes',
+        code: 'git stash',
+        description: 'Temporarily stash changes',
+        category: 'Stashing'
+      },
+      {
+        title: 'Apply stashed changes',
+        code: 'git stash pop',
+        description: 'Apply most recent stashed changes',
+        category: 'Stashing'
+      },
+      {
+        title: 'List stashes',
+        code: 'git stash list',
+        description: 'List all stashed changes',
+        category: 'Stashing'
+      },
+      {
+        title: 'View branch info',
+        code: 'git branch -a',
+        description: 'List all local and remote branches',
+        category: 'Branching'
+      },
+      {
+        title: 'Delete branch',
+        code: 'git branch -d feature-branch',
+        description: 'Delete a local branch',
+        category: 'Branching'
+      },
+      {
+        title: 'Delete remote branch',
+        code: 'git push origin --delete feature-branch',
+        description: 'Delete a remote branch',
+        category: 'Branching'
+      },
+      {
+        title: 'Tag a commit',
+        code: 'git tag v1.0.0',
+        description: 'Create a lightweight tag',
+        category: 'Tagging'
+      },
+      {
+        title: 'List tags',
+        code: 'git tag',
+        description: 'List all tags',
+        category: 'Tagging'
+      },
+      {
+        title: 'Show commit details',
+        code: 'git show commit-hash',
+        description: 'Show information about a specific commit',
+        category: 'History'
+      },
+      {
+        title: 'Amend commit',
+        code: 'git commit --amend',
+        description: 'Modify the most recent commit',
+        category: 'Committing'
+      },
+      {
+        title: 'Reset to commit',
+        code: 'git reset --hard commit-hash',
+        description: 'Reset to a specific commit (destructive)',
+        category: 'History'
+      },
+      {
+        title: 'Rebase branch',
+        code: 'git rebase main',
+        description: 'Rebase current branch onto main',
+        category: 'Rebasing'
+      },
+      {
+        title: 'Interactive rebase',
+        code: 'git rebase -i HEAD~3',
+        description: 'Interactive rebase of last 3 commits',
+        category: 'Rebasing'
+      },
+      {
+        title: 'View file history',
+        code: 'git log --follow -p file.txt',
+        description: 'Show history of a file including renames',
+        category: 'History'
+      },
+      {
+        title: 'Find commit by message',
+        code: 'git log --grep="bug fix"',
+        description: 'Search commits by message content',
+        category: 'History'
+      },
+      {
+        title: 'Config user info',
+        code: 'git config --global user.name "Your Name"',
+        description: 'Set global username',
+        category: 'Configuration'
+      },
+      {
+        title: 'Config email',
+        code: 'git config --global user.email "email@example.com"',
+        description: 'Set global email',
+        category: 'Configuration'
+      },
+      {
+        title: 'View config',
+        code: 'git config --list',
+        description: 'List all Git configuration settings',
+        category: 'Configuration'
+      },
+      {
+        title: 'Create alias',
+        code: 'git config --global alias.co checkout',
+        description: 'Create a Git command alias',
+        category: 'Configuration'
+      }
+    ]
+  },
+  {
+    title: 'Docker Commands',
+    description: 'Essential Docker commands for container management',
+    icon: Container,
+    slug: 'docker',
+    items: [
+      {
+        title: 'Build image',
+        code: 'docker build -t my-app .',
+        description: 'Build Docker image from Dockerfile',
+        category: 'Images'
+      },
+      {
+        title: 'Run container',
+        code: 'docker run -d -p 8080:80 my-app',
+        description: 'Run container in detached mode with port mapping',
+        category: 'Containers'
+      },
+      {
+        title: 'List running containers',
+        code: 'docker ps',
+        description: 'List all running containers',
+        category: 'Containers'
+      },
+      {
+        title: 'List all containers',
+        code: 'docker ps -a',
+        description: 'List all containers (including stopped)',
+        category: 'Containers'
+      },
+      {
+        title: 'Stop container',
+        code: 'docker stop container-name',
+        description: 'Stop a running container',
+        category: 'Containers'
+      },
+      {
+        title: 'Remove container',
+        code: 'docker rm container-name',
+        description: 'Remove a stopped container',
+        category: 'Containers'
+      },
+      {
+        title: 'List images',
+        code: 'docker images',
+        description: 'List all Docker images',
+        category: 'Images'
+      },
+      {
+        title: 'Remove image',
+        code: 'docker rmi image-name',
+        description: 'Remove a Docker image',
+        category: 'Images'
+      },
+      {
+        title: 'Pull image',
+        code: 'docker pull nginx:latest',
+        description: 'Download image from registry',
+        category: 'Images'
+      },
+      {
+        title: 'Push image',
+        code: 'docker push my-registry/my-app:latest',
+        description: 'Push image to registry',
+        category: 'Images'
+      },
+      {
+        title: 'View container logs',
+        code: 'docker logs container-name',
+        description: 'Show logs from a container',
+        category: 'Debugging'
+      },
+      {
+        title: 'Execute command in container',
+        code: 'docker exec -it container-name bash',
+        description: 'Open interactive bash session in container',
+        category: 'Debugging'
+      },
+      {
+        title: 'View container info',
+        code: 'docker inspect container-name',
+        description: 'Show detailed container information',
+        category: 'Debugging'
+      },
+      {
+        title: 'View resource usage',
+        code: 'docker stats',
+        description: 'Show live container resource usage',
+        category: 'Monitoring'
+      },
+      {
+        title: 'Copy files to container',
+        code: 'docker cp file.txt container-name:/path/',
+        description: 'Copy file from host to container',
+        category: 'Files'
+      },
+      {
+        title: 'Copy files from container',
+        code: 'docker cp container-name:/path/file.txt .',
+        description: 'Copy file from container to host',
+        category: 'Files'
+      },
+      {
+        title: 'Run with volume',
+        code: 'docker run -v /host/path:/container/path my-app',
+        description: 'Mount host directory as volume',
+        category: 'Volumes'
+      },
+      {
+        title: 'List volumes',
+        code: 'docker volume ls',
+        description: 'List all Docker volumes',
+        category: 'Volumes'
+      },
+      {
+        title: 'Create volume',
+        code: 'docker volume create my-volume',
+        description: 'Create a named volume',
+        category: 'Volumes'
+      },
+      {
+        title: 'Remove volume',
+        code: 'docker volume rm my-volume',
+        description: 'Remove a volume',
+        category: 'Volumes'
+      },
+      {
+        title: 'Docker compose up',
+        code: 'docker-compose up -d',
+        description: 'Start services in detached mode',
+        category: 'Compose'
+      },
+      {
+        title: 'Docker compose down',
+        code: 'docker-compose down',
+        description: 'Stop and remove services',
+        category: 'Compose'
+      },
+      {
+        title: 'View compose logs',
+        code: 'docker-compose logs',
+        description: 'Show logs from all services',
+        category: 'Compose'
+      },
+      {
+        title: 'Build with compose',
+        code: 'docker-compose build',
+        description: 'Build images using compose',
+        category: 'Compose'
+      },
+      {
+        title: 'List networks',
+        code: 'docker network ls',
+        description: 'List all Docker networks',
+        category: 'Networking'
+      },
+      {
+        title: 'Create network',
+        code: 'docker network create my-network',
+        description: 'Create a custom network',
+        category: 'Networking'
+      },
+      {
+        title: 'Connect container to network',
+        code: 'docker network connect my-network container-name',
+        description: 'Connect container to network',
+        category: 'Networking'
+      },
+      {
+        title: 'Prune unused data',
+        code: 'docker system prune',
+        description: 'Remove unused containers, networks, images',
+        category: 'Maintenance'
+      },
+      {
+        title: 'Prune volumes',
+        code: 'docker volume prune',
+        description: 'Remove unused volumes',
+        category: 'Maintenance'
+      },
+      {
+        title: 'Save image to file',
+        code: 'docker save -o my-app.tar my-app:latest',
+        description: 'Save image to tar archive',
+        category: 'Images'
+      },
+      {
+        title: 'Load image from file',
+        code: 'docker load -i my-app.tar',
+        description: 'Load image from tar archive',
+        category: 'Images'
+      },
+      {
+        title: 'View disk usage',
+        code: 'docker system df',
+        description: 'Show Docker disk usage',
+        category: 'Monitoring'
+      },
+      {
+        title: 'Run with environment variables',
+        code: 'docker run -e ENV_VAR=value my-app',
+        description: 'Set environment variables in container',
+        category: 'Containers'
+      },
+      {
+        title: 'Run with custom name',
+        code: 'docker run --name my-container my-app',
+        description: 'Run container with specific name',
+        category: 'Containers'
+      },
+      {
+        title: 'Restart policy',
+        code: 'docker run --restart=always my-app',
+        description: 'Set container restart policy',
+        category: 'Containers'
+      },
+      {
+        title: 'View port mappings',
+        code: 'docker port container-name',
+        description: 'Show port mappings for container',
+        category: 'Networking'
+      },
+      {
+        title: 'Rename container',
+        code: 'docker rename old-name new-name',
+        description: 'Rename a container',
+        category: 'Containers'
+      },
+      {
+        title: 'Update container',
+        code: 'docker update --memory=512m container-name',
+        description: 'Update container configuration',
+        category: 'Containers'
+      },
+      {
+        title: 'View events',
+        code: 'docker events',
+        description: 'Show real-time Docker events',
+        category: 'Monitoring'
+      },
+      {
+        title: 'Login to registry',
+        code: 'docker login',
+        description: 'Login to Docker registry',
+        category: 'Registry'
+      },
+      {
+        title: 'Logout from registry',
+        code: 'docker logout',
+        description: 'Logout from Docker registry',
+        category: 'Registry'
+      },
+      {
+        title: 'View Docker info',
+        code: 'docker info',
+        description: 'Show system-wide Docker information',
+        category: 'System'
+      },
+      {
+        title: 'Check Docker version',
+        code: 'docker version',
+        description: 'Show Docker version information',
+        category: 'System'
+      }
+    ]
+  },
+  {
+    title: 'Regex Patterns',
+    description: 'Regular expressions for text matching and validation',
+    icon: Regex,
+    slug: 'regex',
+    items: [
+      {
+        title: 'Email validation',
+        code: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$',
+        description: 'Validate email addresses',
+        category: 'Validation'
+      },
+      {
+        title: 'URL validation',
+        code: '^(https?:\\/\\/)?([\\da-z.-]+)\\.([a-z.]{2,6})([\\/\\w .-]*)*\\/?$',
+        description: 'Match URLs with optional protocol',
+        category: 'Validation'
+      },
+      {
+        title: 'Phone number (US)',
+        code: '^\\+?1?[-.\\s]?\\(?[0-9]{3}\\)?[-.\\s]?[0-9]{3}[-.\\s]?[0-9]{4}$',
+        description: 'Match US phone number formats',
+        category: 'Validation'
+      },
+      {
+        title: 'IP address',
+        code: '^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$',
+        description: 'Match IPv4 addresses',
+        category: 'Validation'
+      },
+      {
+        title: 'Credit card number',
+        code: '^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|6(?:011|5[0-9]{2})[0-9]{12}|(?:2131|1800|35\\d{3})\\d{11})$',
+        description: 'Match major credit card formats',
+        category: 'Validation'
+      },
+      {
+        title: 'Hexadecimal color',
+        code: '^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$',
+        description: 'Match hex color codes (#FFF or #FFFFFF)',
+        category: 'Validation'
+      },
+      {
+        title: 'Date (YYYY-MM-DD)',
+        code: '^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$',
+        description: 'Match dates in YYYY-MM-DD format',
+        category: 'Validation'
+      },
+      {
+        title: 'Time (24-hour)',
+        code: '^([01]?[0-9]|2[0-3]):[0-5][0-9]$',
+        description: 'Match 24-hour time format',
+        category: 'Validation'
+      },
+      {
+        title: 'Password strength',
+        code: '^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$',
+        description: 'Minimum 8 chars, 1 uppercase, 1 lowercase, 1 number, 1 special',
+        category: 'Validation'
+      },
+      {
+        title: 'Username',
+        code: '^[a-zA-Z0-9_-]{3,16}$',
+        description: '3-16 chars, letters, numbers, underscore, hyphen',
+        category: 'Validation'
+      },
+      {
+        title: 'HTML tag',
+        code: '<([a-z]+)([^<]+)*(?:>(.*)<\\/\\1>|\\s+\\/>)',
+        description: 'Match HTML tags with attributes and content',
+        category: 'Extraction'
+      },
+      {
+        title: 'Match word',
+        code: '\\bword\\b',
+        description: 'Match exact word (word boundaries)',
+        category: 'Basic Patterns'
+      },
+      {
+        title: 'Match digits',
+        code: '\\d+',
+        description: 'Match one or more digits',
+        category: 'Character Classes'
+      },
+      {
+        title: 'Match non-digits',
+        code: '\\D+',
+        description: 'Match one or more non-digit characters',
+        category: 'Character Classes'
+      },
+      {
+        title: 'Match whitespace',
+        code: '\\s+',
+        description: 'Match one or more whitespace characters',
+        category: 'Character Classes'
+      },
+      {
+        title: 'Match non-whitespace',
+        code: '\\S+',
+        description: 'Match one or more non-whitespace characters',
+        category: 'Character Classes'
+      },
+      {
+        title: 'Match word characters',
+        code: '\\w+',
+        description: 'Match letters, numbers, underscore',
+        category: 'Character Classes'
+      },
+      {
+        title: 'Match non-word characters',
+        code: '\\W+',
+        description: 'Match non-word characters',
+        category: 'Character Classes'
+      },
+      {
+        title: 'Character set',
+        code: '[aeiou]',
+        description: 'Match any vowel',
+        category: 'Character Classes'
+      },
+      {
+        title: 'Negated character set',
+        code: '[^aeiou]',
+        description: 'Match any character except vowels',
+        category: 'Character Classes'
+      },
+      {
+        title: 'Character range',
+        code: '[a-zA-Z]',
+        description: 'Match any letter (lowercase or uppercase)',
+        category: 'Character Classes'
+      },
+      {
+        title: 'Zero or one',
+        code: 'colou?r',
+        description: 'Match "color" or "colour"',
+        category: 'Quantifiers'
+      },
+      {
+        title: 'Zero or more',
+        code: 'go*gle',
+        description: 'Match "ggle", "gogle", "google", etc.',
+        category: 'Quantifiers'
+      },
+      {
+        title: 'One or more',
+        code: 'go+gle',
+        description: 'Match "gogle", "google", etc. (not "ggle")',
+        category: 'Quantifiers'
+      },
+      {
+        title: 'Exactly N times',
+        code: '\\d{3}',
+        description: 'Match exactly 3 digits',
+        category: 'Quantifiers'
+      },
+      {
+        title: 'Between N and M times',
+        code: '\\d{2,4}',
+        description: 'Match 2 to 4 digits',
+        category: 'Quantifiers'
+      },
+      {
+        title: 'At least N times',
+        code: '\\d{3,}',
+        description: 'Match 3 or more digits',
+        category: 'Quantifiers'
+      },
+      {
+        title: 'Start of string',
+        code: '^Hello',
+        description: 'Match "Hello" at beginning of string',
+        category: 'Anchors'
+      },
+      {
+        title: 'End of string',
+        code: 'world$',
+        description: 'Match "world" at end of string',
+        category: 'Anchors'
+      },
+      {
+        title: 'Word boundary',
+        code: '\\bcat\\b',
+        description: 'Match "cat" as whole word only',
+        category: 'Anchors'
+      },
+      {
+        title: 'Non-word boundary',
+        code: '\\Bcat\\B',
+        description: 'Match "cat" only when inside another word',
+        category: 'Anchors'
+      },
+      {
+        title: 'Capture group',
+        code: '(\\d{3})-(\\d{3})-(\\d{4})',
+        description: 'Capture area code, prefix, and line number',
+        category: 'Groups'
+      },
+      {
+        title: 'Non-capturing group',
+        code: '(?:\\d{3}-){2}\\d{4}',
+        description: 'Group without capturing',
+        category: 'Groups'
+      },
+      {
+        title: 'Alternation',
+        code: 'cat|dog|bird',
+        description: 'Match "cat" or "dog" or "bird"',
+        category: 'Groups'
+      },
+      {
+        title: 'Positive lookahead',
+        code: '\\d(?=px)',
+        description: 'Match digit only if followed by "px"',
+        category: 'Lookarounds'
+      },
+      {
+        title: 'Negative lookahead',
+        code: '\\d(?!px)',
+        description: 'Match digit only if NOT followed by "px"',
+        category: 'Lookarounds'
+      },
+      {
+        title: 'Positive lookbehind',
+        code: '(?<=\\$)\\d+',
+        description: 'Match digits only if preceded by "$"',
+        category: 'Lookarounds'
+      },
+      {
+        title: 'Negative lookbehind',
+        code: '(?<!\\$)\\d+',
+        description: 'Match digits only if NOT preceded by "$"',
+        category: 'Lookarounds'
+      },
+      {
+        title: 'Extract domain from URL',
+        code: 'https?:\\/\\/([^\\/]+)',
+        description: 'Capture domain name from URL',
+        category: 'Extraction'
+      },
+      {
+        title: 'Match quoted text',
+        code: '"[^"]*"',
+        description: 'Match text inside double quotes',
+        category: 'Extraction'
+      },
+      {
+        title: 'Match JSON key-value',
+        code: '"([^"]+)":\\s*"([^"]*)"',
+        description: 'Extract key-value pairs from JSON strings',
+        category: 'Extraction'
+      },
+      {
+        title: 'Match HTML attributes',
+        code: '([a-z]+)="([^"]*)"',
+        description: 'Extract attribute names and values from HTML',
+        category: 'Extraction'
+      },
+      {
+        title: 'Match CSS hex colors',
+        code: '#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})\\b',
+        description: 'Extract CSS hex color values',
+        category: 'Extraction'
+      },
+      {
+        title: 'Match file extensions',
+        code: '\\.(jpg|png|gif|pdf|docx?|xlsx?)$',
+        description: 'Match common file extensions',
+        category: 'File Patterns'
+      },
+      {
+        title: 'Match image files',
+        code: '\\.(jpg|jpeg|png|gif|bmp|webp|svg)$',
+        description: 'Match image file extensions',
+        category: 'File Patterns'
+      },
+      {
+        title: 'Match document files',
+        code: '\\.(pdf|docx?|xlsx?|pptx?|txt)$',
+        description: 'Match document file extensions',
+        category: 'File Patterns'
+      },
+      {
+        title: 'Match UUID',
+        code: '[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}',
+        description: 'Match UUID format',
+        category: 'Validation'
+      },
+      {
+        title: 'Match MAC address',
+        code: '([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})',
+        description: 'Match MAC address format',
+        category: 'Validation'
+      },
+      {
+        title: 'Match base64',
+        code: '^[A-Za-z0-9+/]*={0,2}$',
+        description: 'Match base64 encoded strings',
+        category: 'Validation'
+      },
+      {
+        title: 'Match social security number',
+        code: '^\\d{3}-\\d{2}-\\d{4}$',
+        description: 'Match SSN format (XXX-XX-XXXX)',
+        category: 'Validation'
+      },
+      {
+        title: 'Match zip code',
+        code: '^\\d{5}(-\\d{4})?$',
+        description: 'Match US zip code (5 or 9 digits)',
+        category: 'Validation'
+      },
+      {
+        title: 'Match coordinates',
+        code: '^-?\\d{1,3}\\.\\d+,\\s*-?\\d{1,3}\\.\\d+$',
+        description: 'Match latitude,longitude coordinates',
+        category: 'Validation'
+      },
+      {
+        title: 'Match HTML comments',
+        code: '<!--.*?-->',
+        description: 'Match HTML comments (non-greedy)',
+        category: 'Extraction'
+      },
+      {
+        title: 'Match multiple lines',
+        code: '(?s)start.*?end',
+        description: 'Match across multiple lines (dotall mode)',
+        category: 'Flags'
+      },
+      {
+        title: 'Case insensitive match',
+        code: '(?i)hello',
+        description: 'Match "hello" case insensitively',
+        category: 'Flags'
+      },
+      {
+        title: 'Multiline mode',
+        code: '(?m)^start',
+        description: 'Match "start" at beginning of any line',
+        category: 'Flags'
       }
     ]
   }

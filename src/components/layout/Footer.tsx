@@ -1,7 +1,9 @@
 import { Sparkles, Github, Twitter, Mail } from 'lucide-react'
+import { getFeaturedTools } from '@/config/tools-config'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
+  const featuredTools = getFeaturedTools().slice(0, 4)
   
   return (
     <footer className="bg-white border-t border-gray-200">
@@ -28,18 +30,21 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold text-gray-900 mb-4">Tools</h4>
             <ul className="space-y-2 text-gray-600">
-              <li><a href="/password-generator" className="hover:text-emerald-600 transition-colors">Password Generator</a></li>
-              <li><a href="/unit-converter" className="hover:text-emerald-600 transition-colors">Unit Converter</a></li>
-              <li><a href="/calculator" className="hover:text-emerald-600 transition-colors">Calculator</a></li>
-              <li><a href="/color-picker" className="hover:text-emerald-600 transition-colors">Color Picker</a></li>
-            </ul>
+              {featuredTools.map((tool) => (
+              <li key={tool.id}>
+                <a href={tool.href} className="hover:text-emerald-600 transition-colors">
+                  {tool.name}
+                </a>
+              </li>
+            ))}
+            </ul>  
           </div>
 
           {/* Support */}
           <div>
             <h4 className="text-lg font-semibold text-gray-900 mb-4">Support</h4>
             <ul className="space-y-2 text-gray-600">
-              <li><a href="/contact" className="hover:text-emerald-600 transition-colors">Contact</a></li>
+               <li><a href="/contact" className="hover:text-emerald-600 transition-colors">Contact</a></li>
               <li><a href="/privacy-policy" className="hover:text-emerald-600 transition-colors">Privacy Policy</a></li>
               <li><a href="/terms-of-service" className="hover:text-emerald-600 transition-colors">Terms of Service</a></li>
               <li><a href="/faq" className="hover:text-emerald-600 transition-colors">FAQ</a></li>

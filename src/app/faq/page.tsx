@@ -1,8 +1,6 @@
 // app/faq/page.tsx
 import type { Metadata } from 'next';
 import { HelpCircle, Search, FileText, Code, Shield, Download } from 'lucide-react';
-import Header from './../../components/layout/Header';
-import Footer from './../../components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions - PassZap Tools',
@@ -150,7 +148,6 @@ export default function FAQPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
-      <Header />
       
       <main className="py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -184,7 +181,7 @@ export default function FAQPage() {
             {faqCategories.map((category, categoryIndex) => (
               <section key={categoryIndex} className="bg-white rounded-xl shadow-lg overflow-hidden">
                 {/* Category Header */}
-                <div className="bg-gradient-to-r from-green-500 to-emerald-500 p-6">
+                <div className="bg-gradient-to-r from-teal-500 to-emerald-500 p-6">
                   <div className="flex items-center gap-3">
                     <category.icon className="h-6 w-6 text-white" />
                     <h2 className="text-2xl font-bold text-white">{category.title}</h2>
@@ -219,7 +216,7 @@ export default function FAQPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition-colors font-medium"
+                  className="bg-teal-500 text-white px-6 py-3 rounded-lg hover:bg-green-500 transition-colors font-medium"
                 >
                   Contact Support
                 </a>
@@ -235,7 +232,6 @@ export default function FAQPage() {
         </div>
       </main>
 
-      <Footer />
     </div>
   );
 }

@@ -1,8 +1,6 @@
 // app/privacy-policy/page.tsx
 import type { Metadata } from 'next';
 import { Shield, Lock, Eye, User, Mail, Database } from 'lucide-react';
-import Header from './../../components/layout/Header';
-import Footer from './../../components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy - PassZap Tools',
@@ -12,8 +10,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Header />
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
       
       <main className="py-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -229,8 +226,6 @@ export default function PrivacyPolicyPage() {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

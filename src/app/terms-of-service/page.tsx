@@ -1,8 +1,6 @@
 // app/terms-of-service/page.tsx
 import type { Metadata } from 'next';
 import { FileText, Scale, AlertTriangle, CheckCircle, Shield } from 'lucide-react';
-import Header from './../../components/layout/Header';
-import Footer from './../../components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'Terms of Service - PassZap Tools',
@@ -15,8 +13,7 @@ export const metadata: Metadata = {
 
 export default function TermsOfServicePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-100">
-      <Header />
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
       
       <main className="py-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -269,7 +266,6 @@ export default function TermsOfServicePage() {
         </div>
       </main>
 
-      <Footer />
     </div>
   );
 }

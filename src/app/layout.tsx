@@ -1,6 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { GoogleAnalytics } from '@next/third-parties/google';
+import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
 import { Breadcrumbs, SeoBreadcrumbs } from './../components/layout/Breadcrumbs'; 
 
 export const metadata: Metadata = {
@@ -66,10 +68,11 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-gray-50 antialiased">
         <Breadcrumbs />
+        <Header />
         <main className="min-h-screen">
           {children}
         </main>
-        
+        <Footer />
         {isProduction && <GoogleAnalytics gaId="G-P7DG67YFC0" />}
       </body>
     </html>
