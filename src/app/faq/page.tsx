@@ -4,7 +4,7 @@ import { HelpCircle, Search, FileText, Code, Shield, Download } from 'lucide-rea
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions - PassZap Tools',
-  description: 'Find answers to common questions about PassZap tools, features, security, and usage.',
+  description: 'Find answers to common questions about PassZap tools, features, security, and usage. For further questions contact us via our contact page',
   keywords: 'FAQ, frequently asked questions, help, support, PassZap tools',
   openGraph: {
     title: 'Frequently Asked Questions - PassZap Tools',

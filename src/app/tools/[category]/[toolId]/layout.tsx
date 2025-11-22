@@ -30,6 +30,9 @@ export async function generateMetadata({
     title: `${toolConfig.name} - Free Online Tool | PassZap`,
     description: toolConfig.description,
     keywords: `${toolConfig.name}, ${toolConfig.category} tools, online utility`,
+    alternates: {
+      canonical: `https://passzap.net/${toolConfig.category}/${toolConfig.id}`
+    }
   };
 }
 
