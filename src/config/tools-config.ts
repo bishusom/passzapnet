@@ -49,6 +49,14 @@ export const categoriesConfig: Record<string, Omit<CategoryConfig, 'tools'>> = {
     color: 'text-green-500',
     bgColor: 'bg-green-50'
   },
+  'date-time-tools': {
+    id: 'date-time-tools',
+    name: 'Date & Time Tools',
+    description: 'Convert between date formats, timezones, and timestamps',
+    icon: Clock,
+    color: 'text-green-500',
+    bgColor: 'bg-green-50'
+  },
   utilities: {
     id: 'utilities',
     name: 'Uitlity Tools',
@@ -608,25 +616,6 @@ export const toolsConfig: Record<string, ToolConfig> = {
   },
 
   // 🧮 Calculators & Converters
-  'stopwatch-timer': {
-    id: 'stopwatch-timer',
-    name: 'Stopwatch & Timer',
-    description: 'Precision timing tools',
-    category: 'utilities',
-    categoryName: 'Utility Tools',
-    icon: Clock,
-    color: 'text-orange-500',
-    bgColor: 'bg-orange-50',
-    href: '/tools/utilities/stopwatch-timer',
-    featured: true,
-    seo: {
-      title: 'Stopwatch & Timer - Precision Timing Tools | PassZap',
-      description: 'Free online stopwatch and timer tools. Precision timing for workouts, cooking, presentations, and more. Easy to use and accurate.',
-      keywords: 'stopwatch, timer, online stopwatch, countdown timer, timing tools',
-      ogImage: '/og/stopwatch-timer-og.png',
-      canonical: 'https://passzap.net/tools/utilities/stopwatch-timer'
-    }
-  },
   'calculator': {
     id: 'calculator',
     name: 'Calculator',
@@ -681,6 +670,98 @@ export const toolsConfig: Record<string, ToolConfig> = {
       canonical: 'https://passzap.net/tools/utilities/unit-converter'
     }
   },
+  'stopwatch-timer': {
+    id: 'stopwatch-timer',
+    name: 'Stopwatch & Timer',
+    description: 'Precision timing tools',
+    category: 'date-time-tools',
+    categoryName: 'Date & Time Tools',
+    icon: Clock,
+    color: 'text-green-500',
+    bgColor: 'bg-green-50',
+    href: '/tools/date-time-tools/stopwatch-timer',
+    featured: true,
+    seo: {
+      title: 'Stopwatch & Timer - Precision Timing Tools | PassZap',
+      description: 'Free online stopwatch and timer tools. Precision timing for workouts, cooking, presentations, and more. Easy to use and accurate.',
+      keywords: 'stopwatch, timer, online stopwatch, countdown timer, timing tools',
+      ogImage: '/og/stopwatch-timer-og.png',
+      canonical: 'https://passzap.net/tools/utilities/stopwatch-timer'
+    }
+  },
+  'timezone-converter': {
+    id: 'timezone-converter',
+    name: 'Timezone Converter',
+    description: 'Convert times between different timezones worldwide',
+    category: 'date-time-tools',
+    categoryName: 'Date & Time Tools',
+    icon: Globe,
+    color: 'text-green-500',
+    bgColor: 'bg-green-50',
+    href: '/tools/date-time-tools/timezone-converter',
+    featured: true,
+    seo: {
+      title: 'Timezone Converter - Convert Time Between Timezones | PassZap',
+      description: 'Free online timezone converter tool. Convert times between different timezones worldwide with daylight saving time support.',
+      keywords: 'timezone converter, time zone converter, world time, time conversion, daylight saving time',
+      ogImage: '/og/timezone-converter-og.png',
+      canonical: 'https://passzap.net/tools/date-time-tools/timezone-converter'
+    }
+  },
+'epoch-converter': {
+  id: 'epoch-converter',
+  name: 'Epoch Timestamp Converter',
+  description: 'Convert Unix timestamps to human-readable dates and vice versa',
+  category: 'date-time-tools',
+  categoryName: 'Date & Time Tools',
+  icon: Clock,
+  color: 'text-green-500',
+  bgColor: 'bg-green-50',
+  href: '/tools/date-time-tools/epoch-converter',
+  seo: {
+    title: 'Epoch Converter - Unix Timestamp Converter | PassZap',
+    description: 'Free online epoch timestamp converter. Convert Unix timestamps to human-readable dates and vice versa. Supports seconds, milliseconds, and microseconds.',
+    keywords: 'epoch converter, unix timestamp converter, timestamp to date, date to timestamp, unix time',
+    ogImage: '/og/epoch-converter-og.png',
+    canonical: 'https://passzap.net/tools/date-time-tools/epoch-converter'
+  }
+},
+'ldap-converter': {
+  id: 'ldap-converter',
+  name: 'LDAP Timestamp Converter',
+  description: 'Convert LDAP/Active Directory timestamps to readable dates',
+  category: 'date-time-tools',
+  categoryName: 'Date & Time Tools',
+  icon: Database,
+  color: 'text-green-500',
+  bgColor: 'bg-green-50',
+  href: '/tools/date-time-tools/ldap-converter',
+  seo: {
+    title: 'LDAP Timestamp Converter - Active Directory Time Converter | PassZap',
+    description: 'Free online LDAP timestamp converter. Convert LDAP/Active Directory timestamps (18-digit format) to human-readable dates and vice versa.',
+    keywords: 'ldap timestamp converter, active directory timestamp, ldap time, windows time converter, 18-digit timestamp',
+    ogImage: '/og/ldap-converter-og.png',
+    canonical: 'https://passzap.net/tools/date-time-tools/ldap-converter'
+  }
+},
+'unix-hex-converter': {
+  id: 'unix-hex-converter',
+  name: 'Unix Hex Timestamp Converter',
+  description: 'Convert hexadecimal Unix timestamps to readable dates',
+  category: 'date-time-tools',
+  categoryName: 'Date & Time Tools',
+  icon: Hash,
+  color: 'text-green-500',
+  bgColor: 'bg-green-50',
+  href: '/tools/date-time-tools/unix-hex-converter',
+  seo: {
+    title: 'Unix Hex Timestamp Converter - Hexadecimal Timestamp Converter | PassZap',
+    description: 'Free online Unix hex timestamp converter. Convert hexadecimal Unix timestamps to human-readable dates and vice versa.',
+    keywords: 'unix hex converter, hexadecimal timestamp, hex to date, timestamp hex converter',
+    ogImage: '/og/unix-hex-converter-og.png',
+    canonical: 'https://passzap.net/tools/date-time-tools/unix-hex-converter'
+  }
+},
 
   // 🔧 System & Network
   'ip-tools': {
