@@ -8,10 +8,6 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: false,
   },
-  // Skip ESLint during build
-  eslint: {
-    ignoreDuringBuilds: true,
-  }
 }
 
 module.exports = nextConfig
