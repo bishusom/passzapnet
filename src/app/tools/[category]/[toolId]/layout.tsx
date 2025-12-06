@@ -31,7 +31,7 @@ export async function generateMetadata({
     description: toolConfig.description,
     keywords: `${toolConfig.name}, ${toolConfig.category} tools, online utility`,
     alternates: {
-      canonical: `https://passzap.net/${toolConfig.category}/${toolConfig.id}`
+      canonical: `https://passzap.net/tools/${category}/${toolId}`,
     }
   };
 }

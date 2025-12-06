@@ -686,7 +686,7 @@ export const toolsConfig: Record<string, ToolConfig> = {
       description: 'Free online stopwatch and timer tools. Precision timing for workouts, cooking, presentations, and more. Easy to use and accurate.',
       keywords: 'stopwatch, timer, online stopwatch, countdown timer, timing tools',
       ogImage: '/og/stopwatch-timer-og.png',
-      canonical: 'https://passzap.net/tools/utilities/stopwatch-timer'
+      canonical: 'https://passzap.net/tools/date-time-tools/stopwatch-timer'
     }
   },
   'timezone-converter': {
@@ -780,7 +780,7 @@ export const toolsConfig: Record<string, ToolConfig> = {
       description: 'Free online IP address tools. IP lookup, subnet calculator, network diagnostics, and more networking utilities.',
       keywords: 'ip tools, ip lookup, subnet calculator, network tools, ip address tools',
       ogImage: '/og/ip-tools-og.png',
-      canonical: 'https://passzap.net/tools/system/ip-tools'
+      canonical: 'https://passzap.net/tools/system-tools/ip-tools'
     }
   },
   'network-tools': {
