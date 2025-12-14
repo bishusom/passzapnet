@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Contact Us - PassZap Tools Support',
   description: 'Get in touch with the PassZap team. We\'re here to help with any questions, feedback, or support needs.',
   keywords: 'contact, support, help, feedback, PassZap contact',
+  alternates: {
+    canonical: 'https://passzap.net/contact',
+  },
 };
 
 export default function ContactPage() {

@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Privacy Policy - PassZap Tools',
   description: 'Learn how PassZap protects your privacy and handles your data. We are committed to transparency and data security.',
   keywords: 'privacy policy, data protection, GDPR, privacy, security',
+  alternates: {
+    canonical: 'https://passzap.net/privacy-policy',
+  },
 };
 
 export default function PrivacyPolicyPage() {

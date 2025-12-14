@@ -28,7 +28,7 @@ export async function generateMetadata({
 
   return {
     title: `${toolConfig.name} - Free Online Tool | PassZap`,
-    description: toolConfig.description,
+    description: `Best tool to ${toolConfig.description}. Use this free online ${toolConfig.name} tool at PassZap. Processing happens in your browser, so no data leakage. All provided for free!`,
     keywords: `${toolConfig.name}, ${toolConfig.category} tools, online utility`,
     alternates: {
       canonical: `https://passzap.net/tools/${category}/${toolId}`,

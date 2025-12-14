@@ -1,6 +1,5 @@
 // app/tools/[category]/layout.tsx
 import { getAllCategories, getCategoryInfo } from '@/config/tools-config';
-import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
 export function generateStaticParams() {
@@ -28,6 +27,9 @@ export async function generateMetadata({
     title: `${categoryData.name} Tools - Free Online Utilities | PassZap`,
     description: `${categoryData.description}. Browse ${categoryData.toolCount} free tools in this category.`,
     keywords: `${categoryData.name.toLowerCase()} tools, ${categoryData.name.toLowerCase()} utilities, online ${categoryData.name.toLowerCase()}`,
+    alternates: {
+      canonical: `https://passzap.net/tools/${category}`,
+    },
   };
 }
 
