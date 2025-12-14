@@ -35,11 +35,11 @@ export default function Home() {
             <span className="text-sm font-medium text-emerald-700">100% Free • No Registration</span>
           </div>
           
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             All Your
             <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent"> Utilities </span>
             in One Place
-          </h1>
+          </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Free online tools for developers, designers, and everyday users. 
             Clean, fast, and completely free - no strings attached.

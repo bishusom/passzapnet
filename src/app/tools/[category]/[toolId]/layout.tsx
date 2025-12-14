@@ -32,7 +32,15 @@ export async function generateMetadata({
     keywords: `${toolConfig.name}, ${toolConfig.category} tools, online utility`,
     alternates: {
       canonical: `https://passzap.net/tools/${category}/${toolId}`,
-    }
+    },
+    openGraph: {
+      title: `${toolConfig.name} - Free Online Tool | PassZap`,
+      description: `Best tool to ${toolConfig.description}. Use this free online ${toolConfig.name} tool at PassZap. Processing happens in your browser, so no data leakage. All provided for free!`,
+      url: `https://passzap.net/tools/${category}/${toolId}`,
+      siteName: 'PassZap',
+      locale: 'en_US',
+      type: 'website',
+    },
   };
 }
 

@@ -24,7 +24,7 @@ export default function PrivacyPolicyPage() {
                 <Shield className="h-8 w-8 text-blue-600" />
               </div>
             </div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Privacy Policy</h1>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Privacy Policy</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Last updated: {new Date().toLocaleDateString('en-US', { 
                 year: 'numeric', 

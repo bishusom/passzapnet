@@ -158,7 +158,7 @@ export default function FAQPage() {
                 <HelpCircle className="h-8 w-8 text-purple-600" />
               </div>
             </div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h1>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Find quick answers to common questions about PassZap tools and services.
             </p>

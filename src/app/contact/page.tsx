@@ -24,7 +24,7 @@ export default function ContactPage() {
                 <MessageCircle className="h-8 w-8 text-blue-600" />
               </div>
             </div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Have questions, feedback, or need support? We'd love to hear from you.
             </p>
