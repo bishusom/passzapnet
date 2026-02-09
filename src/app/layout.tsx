@@ -65,6 +65,7 @@ export default function RootLayout({
           }}
         />
         <SeoBreadcrumbs />
+        <meta name="msvalidate.01" content="F6606A8E08F7F97C664DFE124F4FD917" />
       </head>
       <body className="min-h-screen bg-gray-50 antialiased">
         <Breadcrumbs />
