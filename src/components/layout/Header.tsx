@@ -2,32 +2,52 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react';
-import { Sparkles, X, Menu, ChevronDown } from 'lucide-react';
-import { getAllCategories, getCategoryPath } from '@/config/tools-config';
+import { Sparkles, X, Menu, ChevronDown, Search } from 'lucide-react';
+import { getAllCategories, getCategoryPath, getAllTools } from '@/config/tools-config';
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [toolsDropdownOpen, setToolsDropdownOpen] = useState(false)
-  const dropdownRef = useRef<HTMLDivElement>(null)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [toolsDropdownOpen, setToolsDropdownOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [showSearchResults, setShowSearchResults] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const searchRef = useRef<HTMLDivElement>(null);
 
   const categories = getAllCategories().map(cat => ({
     id: cat.id,
     name: cat.name,
     icon: cat.icon,
     path: getCategoryPath(cat.id)
-  }))
+  }));
 
-  // Close dropdown when clicking outside
+  const allTools = getAllTools();
+
+  // Filter tools based on search term
+  const filteredTools = searchTerm.trim() === '' ? [] : allTools.filter(tool =>
+    tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    tool.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    tool.categoryName.toLowerCase().includes(searchTerm.toLowerCase())
+  ).slice(0, 8); // Limit to 8 results for performance
+
+  // Close dropdowns when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setToolsDropdownOpen(false)
+        setToolsDropdownOpen(false);
+      }
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setShowSearchResults(false);
       }
     }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [])
+  // Clear search when a result is clicked
+  const handleResultClick = () => {
+    setSearchTerm('');
+    setShowSearchResults(false);
+  };
 
   return (
     <header className="bg-white/80 backdrop-blur-sm border-b border-emerald-100 sticky top-0 z-50">
@@ -79,13 +99,50 @@ export default function Header() {
                 </div>
               )}
             </div>
-            
-            <a href="/#generator" className="text-gray-600 hover:text-emerald-600 transition-colors font-medium py-2">
-              Generator
-            </a>
-            <a href="/#features" className="text-gray-600 hover:text-emerald-600 transition-colors font-medium py-2">
-              Features
-            </a>
+
+            {/* Search Input */}
+            <div className="relative" ref={searchRef}>
+              <div className="flex items-center bg-gray-100 rounded-lg px-3 py-2 focus-within:ring-2 focus-within:ring-emerald-500 focus-within:bg-white transition-all">
+                <Search className="h-4 w-4 text-gray-500" />
+                <input
+                  type="text"
+                  placeholder="Search tools..."
+                  value={searchTerm}
+                  onChange={(e) => {
+                    setSearchTerm(e.target.value);
+                    setShowSearchResults(true);
+                  }}
+                  onFocus={() => setShowSearchResults(true)}
+                  className="ml-2 bg-transparent outline-none text-sm w-40 lg:w-56"
+                />
+              </div>
+
+              {/* Search Results Dropdown */}
+              {showSearchResults && filteredTools.length > 0 && (
+                <div className="absolute top-full right-0 mt-2 w-72 bg-white rounded-xl shadow-lg border border-emerald-100 py-2 max-h-96 overflow-y-auto animate-in slide-in-from-top z-50">
+                  {filteredTools.map((tool) => (
+                    <a
+                      key={tool.id}
+                      href={tool.href}
+                      className="flex items-start space-x-3 px-4 py-3 hover:bg-emerald-50 transition-colors"
+                      onClick={handleResultClick}
+                    >
+                      <tool.icon className={`h-4 w-4 mt-0.5 ${tool.color}`} />
+                      <div>
+                        <div className="font-medium text-gray-900">{tool.name}</div>
+                        <div className="text-xs text-gray-500 line-clamp-1">{tool.description}</div>
+                        <div className="text-xs text-emerald-600 mt-1">{tool.categoryName}</div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              )}
+              {showSearchResults && searchTerm.trim() !== '' && filteredTools.length === 0 && (
+                <div className="absolute top-full right-0 mt-2 w-72 bg-white rounded-xl shadow-lg border border-emerald-100 py-4 px-4 text-center text-gray-500 text-sm">
+                  No tools found
+                </div>
+              )}
+            </div>
           </nav>
 
           {/* Mobile menu button */}
@@ -135,24 +192,55 @@ export default function Header() {
                 </div>
               </div>
               
-              <a 
-                href="/#generator" 
-                className="text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 transition-colors font-medium py-3 px-4 rounded-lg"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Generator
-              </a>
-              <a 
-                href="/#features" 
-                className="text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 transition-colors font-medium py-3 px-4 rounded-lg"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Features
-              </a>
+              {/* Mobile Search */}
+              <div className="px-4 py-2">
+                <div className="flex items-center bg-gray-100 rounded-lg px-3 py-2 focus-within:ring-2 focus-within:ring-emerald-500 focus-within:bg-white transition-all">
+                  <Search className="h-4 w-4 text-gray-500" />
+                  <input
+                    type="text"
+                    placeholder="Search tools..."
+                    value={searchTerm}
+                    onChange={(e) => {
+                      setSearchTerm(e.target.value);
+                      // Keep mobile menu open while typing
+                    }}
+                    className="ml-2 bg-transparent outline-none text-sm flex-1"
+                  />
+                </div>
+                {/* Show results inline in mobile menu */}
+                {searchTerm.trim() !== '' && (
+                  <div className="mt-3 space-y-2 max-h-64 overflow-y-auto">
+                    {filteredTools.length > 0 ? (
+                      filteredTools.map((tool) => (
+                        <a
+                          key={tool.id}
+                          href={tool.href}
+                          className="flex items-start space-x-3 px-3 py-2 hover:bg-emerald-50 rounded-lg transition-colors"
+                          onClick={() => {
+                            setSearchTerm('');
+                            setMobileMenuOpen(false);
+                          }}
+                        >
+                          <tool.icon className={`h-4 w-4 mt-0.5 ${tool.color}`} />
+                          <div>
+                            <div className="font-medium text-gray-900">{tool.name}</div>
+                            <div className="text-xs text-gray-500">{tool.description}</div>
+                            <div className="text-xs text-emerald-600 mt-1">{tool.categoryName}</div>
+                          </div>
+                        </a>
+                      ))
+                    ) : (
+                      <div className="text-center text-gray-500 py-4 text-sm">
+                        No tools found
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
             </div>
           </nav>
         )}
       </div>
     </header>
-  )
+  );
 }
