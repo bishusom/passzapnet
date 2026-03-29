@@ -6,6 +6,21 @@
   NODE_ENV = "production"
 
 [[redirects]]
+  from = "https://www.passzap.net/*"
+  to = "https://passzap.net/:splat"
+  status = 301
+
+[[redirects]]
+  from = "http://passzap.net/*"
+  to = "https://passzap.net/:splat"
+  status = 301
+
+[[redirects]]
+  from = "http://www.passzap.net/*"
+  to = "https://passzap.net/:splat"
+  status = 301
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
