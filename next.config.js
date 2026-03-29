@@ -10,6 +10,23 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // ========== CANONICAL DOMAIN: redirect www to non-www ==========
+      // All requests to www.passzap.net/* → https://passzap.net/*
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.passzap.net',
+          },
+        ],
+        destination: 'https://passzap.net/:path*',
+        permanent: true, // 308 redirect (permanent)
+      },
+      // Note: Vercel automatically redirects HTTP → HTTPS at the platform level,
+      // so no explicit HTTP rules are needed here.
+
+      // ========== EXISTING PATH REDIRECTS (keep as is) ==========
       { source: '/qr-code-generator', destination: '/tools/design-tools/qr-generator', permanent: true },
       { source: '/qr-code-generator/', destination: '/tools/design-tools/qr-generator', permanent: true },
       { source: '/file-hash', destination: '/tools/security/file-hash', permanent: true },
@@ -22,8 +39,6 @@ const nextConfig = {
       { source: '/design-tools/:path*', destination: '/tools/design-tools/:path*', permanent: true },
       { source: '/graphics/:path*', destination: '/tools/graphics/:path*', permanent: true },
       { source: '/cheatsheets/:path*', destination: '/tools/cheatsheets/:path*', permanent: true },
-      // Force HTTPS + non-www
-      { source: '/', destination: 'https://passzap.net/', permanent: true },
     ]
   }
 }
