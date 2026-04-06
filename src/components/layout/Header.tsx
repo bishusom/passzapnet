@@ -59,9 +59,9 @@ export default function Header() {
               <Sparkles className="h-6 w-6 text-white" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900 group-hover:text-emerald-600 transition-colors">
+              <div className="text-2xl font-bold text-gray-900 group-hover:text-emerald-600 transition-colors">
                 PassZap
-              </h1>
+              </div>
               <p className="text-sm text-emerald-600 font-medium">Free Online Utilities</p>
             </div>
           </a>

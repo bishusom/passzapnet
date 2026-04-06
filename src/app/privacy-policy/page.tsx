@@ -2,6 +2,8 @@
 import type { Metadata } from 'next';
 import { Shield, Lock, Eye, User, Mail, Database } from 'lucide-react';
 
+const LAST_UPDATED = 'April 6, 2026';
+
 export const metadata: Metadata = {
   title: 'Privacy Policy - PassZap Tools',
   description: 'Learn how PassZap protects your privacy and handles your data. We are committed to transparency and data security.',
@@ -24,13 +26,9 @@ export default function PrivacyPolicyPage() {
                 <Shield className="h-8 w-8 text-blue-600" />
               </div>
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Privacy Policy</h2>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Privacy Policy</h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Last updated: {new Date().toLocaleDateString('en-US', { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
-              })}
+              Last updated: {LAST_UPDATED}
             </p>
           </div>
 

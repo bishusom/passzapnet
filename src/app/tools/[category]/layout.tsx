@@ -30,6 +30,22 @@ export async function generateMetadata({
     alternates: {
       canonical: `https://passzap.net/tools/${category}`,
     },
+    openGraph: {
+      title: `${categoryData.name} Tools - Free Online Utilities | PassZap`,
+      description: `${categoryData.description}. Browse ${categoryData.toolCount} free tools in this category.`,
+      url: `https://passzap.net/tools/${category}`,
+      siteName: 'PassZap',
+      locale: 'en_US',
+      type: 'website',
+      images: [
+        {
+          url: 'https://passzap.net/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: `${categoryData.name} tools on PassZap`,
+        },
+      ],
+    },
   };
 }
 

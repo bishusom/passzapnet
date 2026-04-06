@@ -2,6 +2,8 @@
 import type { Metadata } from 'next';
 import { FileText, Scale, AlertTriangle, CheckCircle, Shield } from 'lucide-react';
 
+const LAST_UPDATED = 'April 6, 2026';
+
 export const metadata: Metadata = {
   title: 'Terms of Service - PassZap Tools',
   description: 'Terms and conditions for using PassZap online tools. Learn about acceptable use, limitations, and user responsibilities.',
@@ -24,13 +26,9 @@ export default function TermsOfServicePage() {
                 <Scale className="h-8 w-8 text-emerald-600" />
               </div>
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Terms of Service</h2>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Terms of Service</h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Last updated: {new Date().toLocaleDateString('en-US', { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
-              })}
+              Last updated: {LAST_UPDATED}
             </p>
           </div>
 

@@ -47,10 +47,10 @@ export default function ToolClientWrapper({ toolId, category }: ToolClientWrappe
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">      
+    <section aria-label={`${toolConfig.name} tool`} className="mx-auto max-w-4xl">
       <div className="bg-white rounded-lg shadow-lg p-6">
         <Component />
       </div>
-    </div>
+    </section>
   );
 }

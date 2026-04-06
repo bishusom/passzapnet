@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     siteName: 'PassZap',
     images: [
       {
-        url: '/og/faq-og.jpg',
+        url: 'https://passzap.net/og-image.png',
         width: 1200,
         height: 630,
         alt: 'PassZap FAQ',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Frequently Asked Questions - PassZap Tools',
     description: 'Find answers to common questions about PassZap tools, features, security, and usage.',
-    images: ['/og/faq-og.jpg'],
+    images: ['https://passzap.net/og-image.png'],
   },
   alternates: {
     canonical: 'https://passzap.net/faq',
@@ -158,7 +158,7 @@ export default function FAQPage() {
                 <HelpCircle className="h-8 w-8 text-purple-600" />
               </div>
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Find quick answers to common questions about PassZap tools and services.
             </p>

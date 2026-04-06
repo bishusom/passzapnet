@@ -59,7 +59,7 @@ export const categoriesConfig: Record<string, Omit<CategoryConfig, 'tools'>> = {
   },
   utilities: {
     id: 'utilities',
-    name: 'Uitlity Tools',
+    name: 'Utility Tools',
     description: 'Various calculation and conversion tools',
     icon: Calculator,
     color: 'text-green-500',
@@ -850,10 +850,10 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-indigo-50',
     href: '/tools/cheatsheets/regex',
     seo: {
-      title: 'Sed & Awk Cheat Sheet - Text Processing Commands | PassZap',
+      title: 'Regex Cheat Sheet - Common Patterns and Examples | PassZap',
       description: 'Comprehensive Regex cheat sheet with powerful text matching and validation patterns and examples for advanced text manipulation.',
       keywords: 'regex, regular expressions, patterns, validation, cheatsheet',
-      ogImage: '/og/regex-og.png',
+      ogImage: '/og/regex-cheatsheet-og.png',
       canonical: 'https://passzap.net/tools/cheatsheets/regex'
     }
   },

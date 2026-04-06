@@ -3,12 +3,17 @@ import type { Metadata } from 'next'
 import { GoogleAnalytics } from '@next/third-parties/google';
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
-import { Breadcrumbs, SeoBreadcrumbs } from './../components/layout/Breadcrumbs'; 
+import { Breadcrumbs } from './../components/layout/Breadcrumbs'; 
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://passzap.net'),
   title: 'PassZap - Free Online Utilities & Tools for Developers',
   description: 'Free online tools including password generator, stopwatch, unit converter, calculator, color picker, currency converter, and more developer utilities.',
   keywords: 'password generator, online tools, unit converter, calculator, developer utilities',
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: 'PassZap - Free Online Utilities & Tools for Developers',
     description: 'Free online tools including password generator, stopwatch, unit converter, calculator, color picker, currency converter, and more developer utilities.',
@@ -55,16 +60,10 @@ export default function RootLayout({
               "@type": "WebSite",
               "name": "PassZap",
               "url": "https://passzap.net",
-              "description": "Free online utilities and tools for developers and everyday use",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://passzap.net/search?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
+              "description": "Free online utilities and tools for developers and everyday use"
             })
           }}
         />
-        <SeoBreadcrumbs />
         <meta name="msvalidate.01" content="F6606A8E08F7F97C664DFE124F4FD917" />
       </head>
       <body className="min-h-screen bg-gray-50 antialiased">

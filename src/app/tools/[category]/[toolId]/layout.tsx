@@ -1,6 +1,5 @@
 // app/tools/[category]/[toolId]/layout.tsx
 import { getAllTools, getToolById } from '@/config/tools-config';
-import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
 export function generateStaticParams() {
@@ -27,19 +26,33 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${toolConfig.name} - Free Online Tool | PassZap`,
-    description: `Best tool to ${toolConfig.description}. Use this free online ${toolConfig.name} tool at PassZap. Processing happens in your browser, so no data leakage. All provided for free!`,
-    keywords: `${toolConfig.name}, ${toolConfig.category} tools, online utility`,
+    title: toolConfig.seo.title,
+    description: toolConfig.seo.description,
+    keywords: toolConfig.seo.keywords,
     alternates: {
-      canonical: `https://passzap.net/tools/${category}/${toolId}`,
+      canonical: toolConfig.seo.canonical,
     },
     openGraph: {
-      title: `${toolConfig.name} - Free Online Tool | PassZap`,
-      description: `Best tool to ${toolConfig.description}. Use this free online ${toolConfig.name} tool at PassZap. Processing happens in your browser, so no data leakage. All provided for free!`,
-      url: `https://passzap.net/tools/${category}/${toolId}`,
+      title: toolConfig.seo.title,
+      description: toolConfig.seo.description,
+      url: toolConfig.seo.canonical,
       siteName: 'PassZap',
       locale: 'en_US',
       type: 'website',
+      images: [
+        {
+          url: `https://passzap.net${toolConfig.seo.ogImage}`,
+          width: 1200,
+          height: 630,
+          alt: `${toolConfig.name} preview image`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: toolConfig.seo.title,
+      description: toolConfig.seo.description,
+      images: [`https://passzap.net${toolConfig.seo.ogImage}`],
     },
   };
 }
