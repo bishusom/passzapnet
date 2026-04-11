@@ -5,6 +5,28 @@
       "has": [
         {
           "type": "host",
+          "value": "passzap.net"
+        }
+      ],
+      "destination": "https://freedevtools.studio/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.passzap.net"
+        }
+      ],
+      "destination": "https://freedevtools.studio/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
           "value": "www.freedevtools.studio"
         }
       ],

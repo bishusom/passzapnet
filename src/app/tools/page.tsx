@@ -2,8 +2,9 @@
 'use client'
 import { getAllCategories, getAllTools } from '@/config/tools-config';
 import ToolCard from '@/components/ui/ToolCard';
-import { Search, Filter } from 'lucide-react';
+import { Search, Filter, Command } from 'lucide-react';
 import { useState, useMemo } from 'react';
+import { searchTools } from '@/lib/tool-search';
 
 
 export default function ToolsPage() {
@@ -12,17 +13,20 @@ export default function ToolsPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
-  // Filter tools based on search query and category
   const filteredTools = useMemo(() => {
-    return allTools.filter(tool => {
-      const matchesSearch = tool.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           tool.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           tool.categoryName.toLowerCase().includes(searchQuery.toLowerCase());
-      
-      const matchesCategory = selectedCategory === 'all' || tool.category === selectedCategory;
-      
-      return matchesSearch && matchesCategory;
-    });
+    if (searchQuery.trim() !== '') {
+      return searchTools(
+        allTools,
+        searchQuery,
+        selectedCategory === 'all' ? {} : { category: selectedCategory }
+      ).map(result => result.tool);
+    }
+
+    if (selectedCategory === 'all') {
+      return allTools;
+    }
+
+    return allTools.filter(tool => tool.category === selectedCategory);
   }, [allTools, searchQuery, selectedCategory]);
 
   return (
@@ -34,6 +38,10 @@ export default function ToolsPage() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover our collection of {allTools.length}+ free online tools for developers, designers, and creators
           </p>
+          <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/80 px-4 py-2 text-sm text-gray-600 shadow-sm">
+            <Command className="h-4 w-4 text-emerald-600" />
+            <span>Use Ctrl/Cmd + K for instant search from anywhere</span>
+          </div>
         </header>
 
         {/* Search and Filters */}
@@ -43,7 +51,7 @@ export default function ToolsPage() {
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
             <input
               type="text"
-              placeholder="Search tools by name, description, or category..."
+              placeholder="Search tools by name, alias, keyword, or category..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"

@@ -73,7 +73,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        {isProduction && <GoogleAnalytics gaId="G-P7DG67YFC0" />}
+        {isProduction && <GoogleAnalytics gaId="G-0EW9XLCKEX" />}
       </body>
     </html>
   )

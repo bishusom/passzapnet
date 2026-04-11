@@ -426,6 +426,96 @@ export const toolsConfig: Record<string, ToolConfig> = {
       canonical: 'https://freedevtools.studio/tools/developer/markdown-preview'
     }
   },
+  'string-case-converter': {
+    id: 'string-case-converter',
+    name: 'String Case Converter',
+    description: 'Convert text into camel, snake, kebab, title, and more',
+    category: 'developer',
+    categoryName: 'Developer Tools',
+    icon: Type,
+    color: 'text-blue-500',
+    bgColor: 'bg-blue-50',
+    href: '/tools/developer/string-case-converter',
+    seo: {
+      title: 'String Case Converter - camelCase, snake_case, kebab-case | FreeDevTools Studio',
+      description: 'Free online string case converter. Transform text into camelCase, snake_case, kebab-case, PascalCase, CONSTANT_CASE, and title case instantly.',
+      keywords: 'string case converter, camelcase converter, snake case converter, kebab case converter, pascal case',
+      ogImage: '/og-image.png',
+      canonical: 'https://freedevtools.studio/tools/developer/string-case-converter'
+    }
+  },
+  'html-to-jsx': {
+    id: 'html-to-jsx',
+    name: 'HTML to JSX',
+    description: 'Convert HTML snippets into React-friendly JSX',
+    category: 'developer',
+    categoryName: 'Developer Tools',
+    icon: FileCode,
+    color: 'text-blue-500',
+    bgColor: 'bg-blue-50',
+    href: '/tools/developer/html-to-jsx',
+    seo: {
+      title: 'HTML to JSX Converter - Convert Markup for React | FreeDevTools Studio',
+      description: 'Free online HTML to JSX converter. Turn raw HTML into React-friendly JSX with className, htmlFor, and camelCased attributes.',
+      keywords: 'html to jsx, react converter, class to classname, htmlfor converter, react markup tool',
+      ogImage: '/og-image.png',
+      canonical: 'https://freedevtools.studio/tools/developer/html-to-jsx'
+    }
+  },
+  'list-converter': {
+    id: 'list-converter',
+    name: 'List Converter',
+    description: 'Turn line lists into JSON arrays, CSV, SQL, and more',
+    category: 'developer',
+    categoryName: 'Developer Tools',
+    icon: Combine,
+    color: 'text-blue-500',
+    bgColor: 'bg-blue-50',
+    href: '/tools/developer/list-converter',
+    seo: {
+      title: 'List Converter - Lines to CSV, JSON Array, SQL IN | FreeDevTools Studio',
+      description: 'Free online list converter. Transform line-separated values into CSV, JSON arrays, quoted strings, and SQL IN clauses in your browser.',
+      keywords: 'list converter, lines to csv, json array generator, sql in clause generator, string list formatter',
+      ogImage: '/og-image.png',
+      canonical: 'https://freedevtools.studio/tools/developer/list-converter'
+    }
+  },
+  'config-converter': {
+    id: 'config-converter',
+    name: 'YAML JSON TOML Converter',
+    description: 'Convert config snippets between YAML, JSON, and TOML',
+    category: 'developer',
+    categoryName: 'Developer Tools',
+    icon: Braces,
+    color: 'text-blue-500',
+    bgColor: 'bg-blue-50',
+    href: '/tools/developer/config-converter',
+    seo: {
+      title: 'YAML JSON TOML Converter - Config Format Conversion | FreeDevTools Studio',
+      description: 'Free online YAML, JSON, and TOML converter. Transform common config snippets between formats locally in your browser.',
+      keywords: 'yaml json toml converter, yaml to json, json to toml, config converter, toml to yaml',
+      ogImage: '/og-image.png',
+      canonical: 'https://freedevtools.studio/tools/developer/config-converter'
+    }
+  },
+  'css-unit-converter': {
+    id: 'css-unit-converter',
+    name: 'CSS Unit Converter',
+    description: 'Convert px, rem, em, %, vw, and vh values',
+    category: 'developer',
+    categoryName: 'Developer Tools',
+    icon: Ruler,
+    color: 'text-blue-500',
+    bgColor: 'bg-blue-50',
+    href: '/tools/developer/css-unit-converter',
+    seo: {
+      title: 'CSS Unit Converter - px, rem, em, vw, vh | FreeDevTools Studio',
+      description: 'Free online CSS unit converter. Convert between px, rem, em, percent, vw, and vh using your chosen base values.',
+      keywords: 'css unit converter, px to rem, rem to px, vw converter, em converter',
+      ogImage: '/og-image.png',
+      canonical: 'https://freedevtools.studio/tools/developer/css-unit-converter'
+    }
+  },
 
   // 🖼️ Image & Graphics
   'image-format-converter': {
@@ -943,6 +1033,60 @@ export const toolsConfig: Record<string, ToolConfig> = {
       keywords: 'network tools, ping tool, traceroute, network diagnostics, connectivity test',
       ogImage: '/og/network-tools-og.png',
       canonical: 'https://freedevtools.studio/tools/system-tools/network-tools'
+    }
+  },
+  'http-status': {
+    id: 'http-status',
+    name: 'HTTP Status Code Reference',
+    description: 'Search HTTP status codes and response meanings',
+    category: 'system-tools',
+    categoryName: 'System & Network',
+    icon: Monitor,
+    color: 'text-orange-500',
+    bgColor: 'bg-orange-50',
+    href: '/tools/system-tools/http-status',
+    seo: {
+      title: 'HTTP Status Code Reference - 1xx to 5xx Guide | FreeDevTools Studio',
+      description: 'Free online HTTP status code reference. Search common 1xx, 2xx, 3xx, 4xx, and 5xx responses with clear explanations and troubleshooting tips.',
+      keywords: 'http status codes, status code reference, 404 meaning, 500 error, response codes',
+      ogImage: '/og-image.png',
+      canonical: 'https://freedevtools.studio/tools/system-tools/http-status'
+    }
+  },
+  'user-agent-parser': {
+    id: 'user-agent-parser',
+    name: 'User-Agent Parser',
+    description: 'Inspect browser, engine, OS, and device details',
+    category: 'system-tools',
+    categoryName: 'System & Network',
+    icon: Globe,
+    color: 'text-orange-500',
+    bgColor: 'bg-orange-50',
+    href: '/tools/system-tools/user-agent-parser',
+    seo: {
+      title: 'User-Agent Parser - Browser and Device Inspector | FreeDevTools Studio',
+      description: 'Free online user-agent parser. Inspect browser, rendering engine, operating system, and device type from raw UA strings.',
+      keywords: 'user agent parser, browser detector, ua parser, device detection, user-agent string',
+      ogImage: '/og-image.png',
+      canonical: 'https://freedevtools.studio/tools/system-tools/user-agent-parser'
+    }
+  },
+  'mime-types': {
+    id: 'mime-types',
+    name: 'MIME Types Lookup',
+    description: 'Search file extensions and media types quickly',
+    category: 'system-tools',
+    categoryName: 'System & Network',
+    icon: FileText,
+    color: 'text-orange-500',
+    bgColor: 'bg-orange-50',
+    href: '/tools/system-tools/mime-types',
+    seo: {
+      title: 'MIME Types Lookup - File Extension Reference | FreeDevTools Studio',
+      description: 'Free online MIME types lookup. Search common file extensions, content types, and media type values for web and API work.',
+      keywords: 'mime types lookup, content type reference, file extension mime, media types, application json mime',
+      ogImage: '/og-image.png',
+      canonical: 'https://freedevtools.studio/tools/system-tools/mime-types'
     }
   },
 

@@ -1,17 +1,22 @@
 // components/layout/Header.tsx
 'use client'
 
-import { useState, useRef, useEffect } from 'react';
-import { Sparkles, X, Menu, ChevronDown, Search } from 'lucide-react';
+import { useState, useRef, useEffect, useMemo, type KeyboardEvent as ReactKeyboardEvent } from 'react';
+import { Sparkles, X, Menu, ChevronDown, Search, Command } from 'lucide-react';
 import { getAllCategories, getCategoryPath, getAllTools } from '@/config/tools-config';
+import { searchTools } from '@/lib/tool-search';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [toolsDropdownOpen, setToolsDropdownOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [showSearchResults, setShowSearchResults] = useState(false);
+  const [paletteOpen, setPaletteOpen] = useState(false);
+  const [paletteQuery, setPaletteQuery] = useState('');
+  const [activePaletteIndex, setActivePaletteIndex] = useState(0);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const searchRef = useRef<HTMLDivElement>(null);
+  const paletteInputRef = useRef<HTMLInputElement>(null);
 
   const categories = getAllCategories().map(cat => ({
     id: cat.id,
@@ -22,12 +27,15 @@ export default function Header() {
 
   const allTools = getAllTools();
 
-  // Filter tools based on search term
-  const filteredTools = searchTerm.trim() === '' ? [] : allTools.filter(tool =>
-    tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    tool.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    tool.categoryName.toLowerCase().includes(searchTerm.toLowerCase())
-  ).slice(0, 8); // Limit to 8 results for performance
+  const filteredTools = useMemo(
+    () => searchTerm.trim() === '' ? [] : searchTools(allTools, searchTerm, { limit: 8 }),
+    [allTools, searchTerm]
+  );
+
+  const paletteResults = useMemo(
+    () => searchTools(allTools, paletteQuery, { limit: 12 }),
+    [allTools, paletteQuery]
+  );
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -43,15 +51,86 @@ export default function Header() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
+        event.preventDefault();
+        setPaletteOpen(true);
+      }
+
+      if (event.key === 'Escape') {
+        setPaletteOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  useEffect(() => {
+    if (!paletteOpen) {
+      setActivePaletteIndex(0);
+      return;
+    }
+
+    const focusTimer = window.setTimeout(() => {
+      paletteInputRef.current?.focus();
+    }, 10);
+
+    return () => window.clearTimeout(focusTimer);
+  }, [paletteOpen]);
+
+  useEffect(() => {
+    setActivePaletteIndex(0);
+  }, [paletteQuery]);
+
   // Clear search when a result is clicked
   const handleResultClick = () => {
     setSearchTerm('');
     setShowSearchResults(false);
   };
 
+  const openPalette = () => {
+    setPaletteQuery(searchTerm);
+    setPaletteOpen(true);
+  };
+
+  const closePalette = () => {
+    setPaletteOpen(false);
+    setPaletteQuery('');
+  };
+
+  const navigateToTool = (href: string) => {
+    window.location.href = href;
+  };
+
+  const handlePaletteKeyDown = (event: ReactKeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      setActivePaletteIndex((currentIndex) =>
+        paletteResults.length === 0 ? 0 : (currentIndex + 1) % paletteResults.length
+      );
+    }
+
+    if (event.key === 'ArrowUp') {
+      event.preventDefault();
+      setActivePaletteIndex((currentIndex) =>
+        paletteResults.length === 0
+          ? 0
+          : (currentIndex - 1 + paletteResults.length) % paletteResults.length
+      );
+    }
+
+    if (event.key === 'Enter' && paletteResults[activePaletteIndex]) {
+      event.preventDefault();
+      navigateToTool(paletteResults[activePaletteIndex].tool.href);
+    }
+  };
+
   return (
-    <header className="bg-white/80 backdrop-blur-sm border-b border-emerald-100 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <>
+      <header className="bg-white/80 backdrop-blur-sm border-b border-emerald-100 sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <a href="/" className="flex items-center space-x-3 group">
@@ -115,12 +194,21 @@ export default function Header() {
                   onFocus={() => setShowSearchResults(true)}
                   className="ml-2 bg-transparent outline-none text-sm w-40 lg:w-56"
                 />
+                <button
+                  type="button"
+                  onClick={openPalette}
+                  className="ml-2 hidden lg:flex items-center gap-1 rounded-md border border-emerald-200 bg-white px-2 py-1 text-[11px] font-medium text-gray-500"
+                  aria-label="Open search command palette"
+                >
+                  <Command className="h-3 w-3" />
+                  <span>K</span>
+                </button>
               </div>
 
               {/* Search Results Dropdown */}
               {showSearchResults && filteredTools.length > 0 && (
                 <div className="absolute top-full right-0 mt-2 w-72 bg-white rounded-xl shadow-lg border border-emerald-100 py-2 max-h-96 overflow-y-auto animate-in slide-in-from-top z-50">
-                  {filteredTools.map((tool) => (
+                  {filteredTools.map(({ tool }) => (
                     <a
                       key={tool.id}
                       href={tool.href}
@@ -211,7 +299,7 @@ export default function Header() {
                 {searchTerm.trim() !== '' && (
                   <div className="mt-3 space-y-2 max-h-64 overflow-y-auto">
                     {filteredTools.length > 0 ? (
-                      filteredTools.map((tool) => (
+                      filteredTools.map(({ tool }) => (
                         <a
                           key={tool.id}
                           href={tool.href}
@@ -240,7 +328,80 @@ export default function Header() {
             </div>
           </nav>
         )}
-      </div>
-    </header>
+        </div>
+      </header>
+
+      {paletteOpen && (
+        <div
+          className="fixed inset-0 z-[70] bg-slate-950/45 backdrop-blur-sm px-4 py-16"
+          onClick={closePalette}
+        >
+          <div
+            className="mx-auto max-w-2xl overflow-hidden rounded-3xl border border-emerald-100 bg-white shadow-2xl"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="border-b border-emerald-100 px-5 py-4">
+              <div className="flex items-center gap-3">
+                <Search className="h-5 w-5 text-emerald-600" />
+                <input
+                  ref={paletteInputRef}
+                  type="text"
+                  value={paletteQuery}
+                  onChange={(event) => setPaletteQuery(event.target.value)}
+                  onKeyDown={handlePaletteKeyDown}
+                  placeholder="Search tools, categories, or shortcuts..."
+                  className="flex-1 bg-transparent text-base text-gray-900 outline-none placeholder:text-gray-400"
+                />
+                <button
+                  type="button"
+                  onClick={closePalette}
+                  className="rounded-lg border border-gray-200 px-2 py-1 text-xs font-medium text-gray-500"
+                >
+                  Esc
+                </button>
+              </div>
+              <p className="mt-2 text-sm text-gray-500">
+                Jump to tools with aliases like "jwt", "cron", "wifi qr", or "timestamp".
+              </p>
+            </div>
+
+            <div className="max-h-[26rem] overflow-y-auto p-2">
+              {paletteQuery.trim() === '' ? (
+                <div className="px-4 py-8 text-center text-sm text-gray-500">
+                  Start typing or use <span className="font-medium text-gray-700">Ctrl/Cmd + K</span> anytime.
+                </div>
+              ) : paletteResults.length > 0 ? (
+                paletteResults.map(({ tool }, index) => (
+                  <button
+                    key={tool.id}
+                    type="button"
+                    onMouseEnter={() => setActivePaletteIndex(index)}
+                    onClick={() => navigateToTool(tool.href)}
+                    className={`flex w-full items-start gap-3 rounded-2xl px-4 py-3 text-left transition-colors ${
+                      index === activePaletteIndex ? 'bg-emerald-50' : 'hover:bg-gray-50'
+                    }`}
+                  >
+                    <div className="rounded-xl bg-white p-2 shadow-sm ring-1 ring-emerald-100">
+                      <tool.icon className={`h-4 w-4 ${tool.color}`} />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-center justify-between gap-4">
+                        <span className="font-medium text-gray-900">{tool.name}</span>
+                        <span className="shrink-0 text-xs font-medium text-emerald-600">{tool.categoryName}</span>
+                      </div>
+                      <p className="mt-1 line-clamp-1 text-sm text-gray-500">{tool.description}</p>
+                    </div>
+                  </button>
+                ))
+              ) : (
+                <div className="px-4 py-8 text-center text-sm text-gray-500">
+                  No tools matched that search.
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
