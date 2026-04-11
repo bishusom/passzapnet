@@ -4,4 +4,4 @@ Disallow: /api/
 Disallow: /admin/
 Disallow: /private/
 
-Sitemap: https://passzap.net/sitemap.xml
+Sitemap: https://freedevtools.studio/sitemap.xml

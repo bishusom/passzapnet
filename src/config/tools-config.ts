@@ -129,11 +129,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-red-50',
     href: '/tools/security/password-generator',
     seo: {
-      title: 'Password Generator - Create Strong Secure Passwords | PassZap',
+      title: 'Password Generator - Create Strong Secure Passwords | FreeDevTools Studio',
       description: 'Free online password generator tool. Create strong, secure passwords with customizable length, character types, and security options.',
       keywords: 'password generator, secure password, random password, password creator, strong password',
       ogImage: '/og/password-generator-og.png',
-      canonical: 'https://passzap.net/tools/security/password-generator'
+      canonical: 'https://freedevtools.studio/tools/security/password-generator'
     }
   },
   'file-hash': {
@@ -147,11 +147,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-red-50',
     href: '/tools/security/file-hash',
     seo: {
-      title: 'File Hash Generator - Generate File Checksums | PassZap',
+      title: 'File Hash Generator - Generate File Checksums | FreeDevTools Studio',
       description: 'Free online file hash generator. Generate MD5, SHA-1, SHA-256 checksums to verify file integrity and detect modifications.',
       keywords: 'file hash generator, checksum, md5, sha1, sha256, file integrity',
       ogImage: '/og/file-hash-og.png',
-      canonical: 'https://passzap.net/tools/security/file-hash'
+      canonical: 'https://freedevtools.studio/tools/security/file-hash'
     }
   },
   'encryption-tools': {
@@ -165,11 +165,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-red-50',
     href: '/tools/security/encryption-tools',
     seo: {
-      title: 'Data Encryption Tools - Encrypt & Decrypt Text | PassZap',
+      title: 'Data Encryption Tools - Encrypt & Decrypt Text | FreeDevTools Studio',
       description: 'Free online data encryption tools. Encrypt and decrypt text using various algorithms securely in your browser.',
       keywords: 'encryption tools, text encryption, data security, encrypt decrypt, crypto tools',
       ogImage: '/og/encryption-tools-og.png',
-      canonical: 'https://passzap.net/tools/security/encryption-tools'
+      canonical: 'https://freedevtools.studio/tools/security/encryption-tools'
     }
   },
 
@@ -185,11 +185,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-blue-50',
     href: '/tools/developer/base64-tools',
     seo: {
-      title: 'Base64 Tools - Encode & Decode Base64 Online | PassZap',
+      title: 'Base64 Tools - Encode & Decode Base64 Online | FreeDevTools Studio',
       description: 'Free online Base64 encoding and decoding tools. Convert text, images, and files to Base64 format securely in your browser.',
       keywords: 'base64 encode, base64 decode, base64 converter, base64 tools',
       ogImage: '/og/base64-tools-og.png',
-      canonical: 'https://passzap.net/tools/developer/base64-tools'
+      canonical: 'https://freedevtools.studio/tools/developer/base64-tools'
     }
   },
   'json-formatter': {
@@ -203,11 +203,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-blue-50',
     href: '/tools/developer/json-formatter',
     seo: {
-      title: 'JSON Formatter & Validator - Beautify and Validate JSON Online | PassZap',
+      title: 'JSON Formatter & Validator - Beautify and Validate JSON Online | FreeDevTools Studio',
       description: 'Free online JSON formatter, validator, and beautifier tool. Format, validate, and minify JSON data with syntax highlighting. No data stored.',
       keywords: 'json formatter, json validator, json beautifier, json minify, json prettifier, json parser',
       ogImage: '/og/json-formatter-og.png',
-      canonical: 'https://passzap.net/tools/developer/json-formatter'
+      canonical: 'https://freedevtools.studio/tools/developer/json-formatter'
     }
   },
   'javascript-minifier': {
@@ -221,11 +221,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-blue-50',
     href: '/tools/developer/javascript-minifier',
     seo: {
-      title: 'JavaScript Minifier - Minify JS Code Online | PassZap',
+      title: 'JavaScript Minifier - Minify JS Code Online | FreeDevTools Studio',
       description: 'Free online JavaScript minifier tool. Minify and compress JS code to reduce file size and improve website performance.',
       keywords: 'javascript minifier, js minify, code compression, javascript compressor',
       ogImage: '/og/javascript-minifier-og.png',
-      canonical: 'https://passzap.net/tools/developer/javascript-minifier'
+      canonical: 'https://freedevtools.studio/tools/developer/javascript-minifier'
     }
   },
   'css-minifier': {
@@ -239,11 +239,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-blue-50',
     href: '/tools/developer/css-minifier',
     seo: {
-      title: 'CSS Minifier - Minify CSS Code Online | PassZap',
+      title: 'CSS Minifier - Minify CSS Code Online | FreeDevTools Studio',
       description: 'Free online CSS minifier tool. Minify and compress CSS code to reduce file size and improve website loading speed.',
       keywords: 'css minifier, css minify, css compression, stylesheet optimizer',
       ogImage: '/og/css-minifier-og.png',
-      canonical: 'https://passzap.net/tools/developer/css-minifier'
+      canonical: 'https://freedevtools.studio/tools/developer/css-minifier'
     }
   },
   'sql-formatter': {
@@ -257,11 +257,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-blue-50',
     href: '/tools/developer/sql-formatter',
     seo: {
-      title: 'SQL Formatter & Beautifier - Format SQL Queries Online | PassZap',
+      title: 'SQL Formatter & Beautifier - Format SQL Queries Online | FreeDevTools Studio',
       description: 'Free online SQL formatter and beautifier tool. Format, validate, and beautify SQL queries with syntax highlighting. Supports MySQL, PostgreSQL, SQL Server.',
       keywords: 'sql formatter, sql beautifier, sql prettifier, sql validator, sql query formatter',
       ogImage: '/og/sql-formatter-og.png',
-      canonical: 'https://passzap.net/tools/developer/sql-formatter'
+      canonical: 'https://freedevtools.studio/tools/developer/sql-formatter'
     }
   },
   'regex-tester': {
@@ -275,11 +275,155 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-blue-50',
     href: '/tools/developer/regex-tester',
     seo: {
-      title: 'Regex Tester & Debugger - Test Regular Expressions Online | PassZap',
+      title: 'Regex Tester & Debugger - Test Regular Expressions Online | FreeDevTools Studio',
       description: 'Free online regex tester and debugger tool. Test, validate, and debug regular expressions with real-time matching, groups, and replacements.',
       keywords: 'regex tester, regular expression tester, regex debugger, regex matcher, pattern testing',
       ogImage: '/og/regex-tester-og.png',
-      canonical: 'https://passzap.net/tools/developer/regex-tester'
+      canonical: 'https://freedevtools.studio/tools/developer/regex-tester'
+    }
+  },
+  'jwt-decoder': {
+    id: 'jwt-decoder',
+    name: 'JWT Decoder',
+    description: 'Decode JWT headers and payloads instantly',
+    category: 'developer',
+    categoryName: 'Developer Tools',
+    icon: Shield,
+    color: 'text-blue-500',
+    bgColor: 'bg-blue-50',
+    href: '/tools/developer/jwt-decoder',
+    seo: {
+      title: 'JWT Decoder & Inspector - Decode Tokens Online | FreeDevTools Studio',
+      description: 'Free online JWT decoder. Inspect token headers, payload claims, issued time, and expiry locally in your browser.',
+      keywords: 'jwt decoder, jwt inspector, decode token, json web token, auth token viewer',
+      ogImage: '/og/jwt-decoder-og.png',
+      canonical: 'https://freedevtools.studio/tools/developer/jwt-decoder'
+    }
+  },
+  'text-diff': {
+    id: 'text-diff',
+    name: 'Text Diff',
+    description: 'Compare text and code line by line',
+    category: 'developer',
+    categoryName: 'Developer Tools',
+    icon: FileText,
+    color: 'text-blue-500',
+    bgColor: 'bg-blue-50',
+    href: '/tools/developer/text-diff',
+    seo: {
+      title: 'Text Diff & Compare Tool - Compare Code Online | FreeDevTools Studio',
+      description: 'Free online text diff tool. Compare two versions of text or code, highlight changes, and inspect additions and removals side by side.',
+      keywords: 'text diff, compare text, code diff, compare files, diff checker',
+      ogImage: '/og/text-diff-og.png',
+      canonical: 'https://freedevtools.studio/tools/developer/text-diff'
+    }
+  },
+  'uuid-generator': {
+    id: 'uuid-generator',
+    name: 'UUID Generator',
+    description: 'Generate and validate UUIDs in bulk',
+    category: 'developer',
+    categoryName: 'Developer Tools',
+    icon: Component,
+    color: 'text-blue-500',
+    bgColor: 'bg-blue-50',
+    href: '/tools/developer/uuid-generator',
+    seo: {
+      title: 'UUID Generator & Validator - Create UUIDs Online | FreeDevTools Studio',
+      description: 'Free online UUID generator and validator. Create UUID v4 values in bulk, strip hyphens, switch casing, and validate existing IDs.',
+      keywords: 'uuid generator, uuid validator, guid generator, uuid v4, bulk uuid',
+      ogImage: '/og/uuid-generator-og.png',
+      canonical: 'https://freedevtools.studio/tools/developer/uuid-generator'
+    }
+  },
+  'cron-parser': {
+    id: 'cron-parser',
+    name: 'Cron Parser',
+    description: 'Build cron expressions and preview schedules',
+    category: 'developer',
+    categoryName: 'Developer Tools',
+    icon: Clock,
+    color: 'text-blue-500',
+    bgColor: 'bg-blue-50',
+    href: '/tools/developer/cron-parser',
+    seo: {
+      title: 'Cron Expression Builder & Parser - Preview Schedules | FreeDevTools Studio',
+      description: 'Free online cron parser and builder. Create cron expressions, inspect schedule fields, and preview upcoming run times in your browser.',
+      keywords: 'cron parser, cron builder, cron expression generator, schedule preview, crontab tool',
+      ogImage: '/og/cron-parser-og.png',
+      canonical: 'https://freedevtools.studio/tools/developer/cron-parser'
+    }
+  },
+  'url-encoder': {
+    id: 'url-encoder',
+    name: 'URL Encoder',
+    description: 'Encode and decode URL-safe strings',
+    category: 'developer',
+    categoryName: 'Developer Tools',
+    icon: Globe,
+    color: 'text-blue-500',
+    bgColor: 'bg-blue-50',
+    href: '/tools/developer/url-encoder',
+    seo: {
+      title: 'URL Encoder & Decoder - Encode URLs Online | FreeDevTools Studio',
+      description: 'Free online URL encoder and decoder. Encode query strings, decode percent-encoded text, and safely transform URLs in your browser.',
+      keywords: 'url encoder, url decoder, percent encoding, query string encoder, url escape',
+      ogImage: '/og/url-encoder-og.png',
+      canonical: 'https://freedevtools.studio/tools/developer/url-encoder'
+    }
+  },
+  'html-entities': {
+    id: 'html-entities',
+    name: 'HTML Entities',
+    description: 'Escape and decode HTML entities safely',
+    category: 'developer',
+    categoryName: 'Developer Tools',
+    icon: Type,
+    color: 'text-blue-500',
+    bgColor: 'bg-blue-50',
+    href: '/tools/developer/html-entities',
+    seo: {
+      title: 'HTML Entity Encoder & Decoder - Escape HTML Online | FreeDevTools Studio',
+      description: 'Free online HTML entity encoder and decoder. Escape special characters for markup or decode HTML entities back into readable text.',
+      keywords: 'html entities, html encoder, html decoder, escape html, decode html entities',
+      ogImage: '/og/html-entities-og.png',
+      canonical: 'https://freedevtools.studio/tools/developer/html-entities'
+    }
+  },
+  'csv-to-json': {
+    id: 'csv-to-json',
+    name: 'CSV to JSON',
+    description: 'Convert CSV rows into formatted JSON',
+    category: 'developer',
+    categoryName: 'Developer Tools',
+    icon: Database,
+    color: 'text-blue-500',
+    bgColor: 'bg-blue-50',
+    href: '/tools/developer/csv-to-json',
+    seo: {
+      title: 'CSV to JSON Converter - Convert Tabular Data Online | FreeDevTools Studio',
+      description: 'Free online CSV to JSON converter. Transform comma-separated data into pretty JSON arrays locally in your browser.',
+      keywords: 'csv to json, csv converter, tabular data converter, json array generator, data transform',
+      ogImage: '/og/csv-to-json-og.png',
+      canonical: 'https://freedevtools.studio/tools/developer/csv-to-json'
+    }
+  },
+  'markdown-preview': {
+    id: 'markdown-preview',
+    name: 'Markdown Preview',
+    description: 'Write Markdown and preview rendered output',
+    category: 'developer',
+    categoryName: 'Developer Tools',
+    icon: BookOpen,
+    color: 'text-blue-500',
+    bgColor: 'bg-blue-50',
+    href: '/tools/developer/markdown-preview',
+    seo: {
+      title: 'Markdown Preview - Render Markdown Online | FreeDevTools Studio',
+      description: 'Free online Markdown preview tool. Write Markdown, render a live preview, and copy the generated source instantly.',
+      keywords: 'markdown preview, markdown editor, md preview, render markdown, markdown tool',
+      ogImage: '/og/markdown-preview-og.png',
+      canonical: 'https://freedevtools.studio/tools/developer/markdown-preview'
     }
   },
 
@@ -296,11 +440,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     href: '/tools/graphics/image-format-converter',
     featured: true,
     seo: {
-      title: 'Image Format Converter - Convert Image Formats Online | PassZap',
+      title: 'Image Format Converter - Convert Image Formats Online | FreeDevTools Studio',
       description: 'Free online image format converter tool. Convert between JPG, PNG, WebP, GIF, and other image formats instantly in your browser.',
       keywords: 'image converter, format converter, jpg to png, png to webp, image format converter',
       ogImage: '/og/image-format-converter-og.png',
-      canonical: 'https://passzap.net/tools/graphics/image-format-converter'
+      canonical: 'https://freedevtools.studio/tools/graphics/image-format-converter'
     }
   },
   'image-resizer': {
@@ -314,11 +458,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-purple-50',
     href: '/tools/graphics/image-resizer',
     seo: {
-      title: 'Image Resizer - Resize Photos Online | PassZap',
+      title: 'Image Resizer - Resize Photos Online | FreeDevTools Studio',
       description: 'Free online image resizer tool. Resize, compress, and optimize images in your browser. No uploads required, complete privacy.',
       keywords: 'image resizer, photo resizer, resize images, image compressor, photo optimization',
       ogImage: '/og/image-resizer-og.png',
-      canonical: 'https://passzap.net/tools/graphics/image-resizer'
+      canonical: 'https://freedevtools.studio/tools/graphics/image-resizer'
     }
   },
   'image-cropper': {
@@ -332,11 +476,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-purple-50',
     href: '/tools/graphics/image-cropper',
     seo: {
-      title: 'Image Cropper - Crop Photos Online | PassZap',
+      title: 'Image Cropper - Crop Photos Online | FreeDevTools Studio',
       description: 'Free online image cropper tool. Crop photos, images, and pictures with precision. Adjust aspect ratios, rotate, and download cropped images instantly.',
       keywords: 'image cropper, photo cropper, crop image online, image editing, photo editing',
       ogImage: '/og/image-cropper-og.png',
-      canonical: 'https://passzap.net/tools/graphics/image-cropper'
+      canonical: 'https://freedevtools.studio/tools/graphics/image-cropper'
     }
   },
   'image-compressor': {
@@ -350,11 +494,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-purple-50',
     href: '/tools/graphics/image-compressor',
     seo: {
-      title: 'Image Compressor - Compress Photos Online | PassZap',
+      title: 'Image Compressor - Compress Photos Online | FreeDevTools Studio',
       description: 'Free online image compressor tool. Reduce image file size while maintaining quality. Compress JPG, PNG, WebP images for web and mobile.',
       keywords: 'image compressor, photo compressor, compress images, reduce image size, image optimization',
       ogImage: '/og/image-compressor-og.png',
-      canonical: 'https://passzap.net/tools/graphics/image-compressor'
+      canonical: 'https://freedevtools.studio/tools/graphics/image-compressor'
     }
   },
   'image-metadata-viewer': {
@@ -368,11 +512,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-purple-50',
     href: '/tools/graphics/image-metadata-viewer',
     seo: {
-      title: 'Image Metadata Viewer - View & Remove EXIF Data | PassZap',
+      title: 'Image Metadata Viewer - View & Remove EXIF Data | FreeDevTools Studio',
       description: 'Free online image metadata viewer tool. View EXIF data, GPS coordinates, and camera information. Option to strip metadata for privacy.',
       keywords: 'metadata viewer, exif data, image metadata, photo information, metadata remover',
       ogImage: '/og/metadata-viewer-og.png',
-      canonical: 'https://passzap.net/tools/graphics/image-metadata-viewer'
+      canonical: 'https://freedevtools.studio/tools/graphics/image-metadata-viewer'
     }
   },
   'image-to-base64': {
@@ -386,11 +530,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-purple-50',
     href: '/tools/graphics/image-to-base64',
     seo: {
-      title: 'Image to Base64 Converter - Convert Images to Base64 | PassZap',
+      title: 'Image to Base64 Converter - Convert Images to Base64 | FreeDevTools Studio',
       description: 'Free online image to Base64 converter tool. Convert images to Base64 data URLs for web development and data URIs.',
       keywords: 'image to base64, base64 converter, data url, image encoder, base64 image',
       ogImage: '/og/image-to-base64-og.png',
-      canonical: 'https://passzap.net/tools/graphics/image-to-base64'
+      canonical: 'https://freedevtools.studio/tools/graphics/image-to-base64'
     }
   },
 
@@ -407,11 +551,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     href: '/tools/design-tools/color-picker',
     featured: true,
     seo: {
-      title: 'Color Picker - RGB, HEX, HSL Color Converter | PassZap',
+      title: 'Color Picker - RGB, HEX, HSL Color Converter | FreeDevTools Studio',
       description: 'Free online color picker tool. Convert between RGB, HEX, HSL color formats. Pick colors and get color codes for web development.',
       keywords: 'color picker, rgb converter, hex converter, hsl converter, color tools',
       ogImage: '/og/color-picker-og.png',
-      canonical: 'https://passzap.net/tools/design-tools/color-picker'
+      canonical: 'https://freedevtools.studio/tools/design-tools/color-picker'
     }
   },
   'color-palette': {
@@ -425,11 +569,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-pink-50',
     href: '/tools/design-tools/color-palette',
     seo: {
-      title: 'Color Palette Generator - Extract Colors from Images | PassZap',
+      title: 'Color Palette Generator - Extract Colors from Images | FreeDevTools Studio',
       description: 'Free online color palette generator. Extract color schemes from images, create beautiful palettes, and get HEX, RGB, HSL codes.',
       keywords: 'color palette generator, color extractor, image color picker, color scheme generator',
       ogImage: '/og/color-palette-og.png',
-      canonical: 'https://passzap.net/tools/design-tools/color-palette'
+      canonical: 'https://freedevtools.studio/tools/design-tools/color-palette'
     }
   },
   'qr-generator': {
@@ -443,11 +587,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-pink-50',
     href: '/tools/design-tools/qr-generator',
     seo: {
-      title: 'QR Code Generator - Create Custom QR Codes Online | PassZap',
+      title: 'QR Code Generator - Create Custom QR Codes Online | FreeDevTools Studio',
       description: 'Free online QR code generator tool. Create custom QR codes for URLs, text, contact information, and more. Download in high quality.',
       keywords: 'qr code generator, qr code creator, qr code maker, custom qr codes',
       ogImage: '/og/qr-generator-og.png',
-      canonical: 'https://passzap.net/tools/design-tools/qr-generator'
+      canonical: 'https://freedevtools.studio/tools/design-tools/qr-generator'
     }
   },
   'css-gradient-generator': {
@@ -461,11 +605,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-pink-50',
     href: '/tools/design-tools/css-gradient-generator',
     seo: {
-      title: 'CSS Gradient Generator - Create Beautiful Gradients Online | PassZap',
+      title: 'CSS Gradient Generator - Create Beautiful Gradients Online | FreeDevTools Studio',
       description: 'Free online CSS gradient generator. Create linear, radial, and conic gradients with color stops, angles, and preview. Get ready-to-use CSS code.',
       keywords: 'css gradient generator, gradient maker, css gradients, linear gradient, radial gradient, gradient background',
       ogImage: '/og/css-gradient-generator-og.png',
-      canonical: 'https://passzap.net/tools/design-tools/css-gradient-generator'
+      canonical: 'https://freedevtools.studio/tools/design-tools/css-gradient-generator'
     }
   },
   'favicon-generator': {
@@ -479,11 +623,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-pink-50',
     href: '/tools/design-tools/favicon-generator',
     seo: {
-      title: 'Favicon Generator - Create Favicons for All Devices | PassZap',
+      title: 'Favicon Generator - Create Favicons for All Devices | FreeDevTools Studio',
       description: 'Free online favicon generator tool. Create favicons for websites that work on all devices and browsers. Multiple formats and sizes.',
       keywords: 'favicon generator, website icon, browser icon, favicon maker',
       ogImage: '/og/favicon-generator-og.png',
-      canonical: 'https://passzap.net/tools/design-tools/favicon-generator'
+      canonical: 'https://freedevtools.studio/tools/design-tools/favicon-generator'
     }
   },
   'icon-generator': {
@@ -497,11 +641,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-pink-50',
     href: '/tools/design-tools/icon-generator',
     seo: {
-      title: 'Icon Generator - Create App Icons in Multiple Sizes | PassZap',
+      title: 'Icon Generator - Create App Icons in Multiple Sizes | FreeDevTools Studio',
       description: 'Free online icon generator tool. Create app icons for iOS, Android, and web apps in multiple sizes and formats.',
       keywords: 'icon generator, app icon, mobile icon, icon maker, app icon generator',
       ogImage: '/og/icon-generator-og.png',
-      canonical: 'https://passzap.net/tools/design-tools/icon-generator'
+      canonical: 'https://freedevtools.studio/tools/design-tools/icon-generator'
     }
   },
   'svg-converter': {
@@ -515,11 +659,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-pink-50',
     href: '/tools/design-tools/svg-converter',
     seo: {
-      title: 'SVG Converter - Convert & Optimize SVG Images | PassZap',
+      title: 'SVG Converter - Convert & Optimize SVG Images | FreeDevTools Studio',
       description: 'Free online SVG converter tool. Convert images to SVG format and optimize vector graphics for web use.',
       keywords: 'svg converter, vector converter, svg optimizer, image to svg',
       ogImage: '/og/svg-converter-og.png',
-      canonical: 'https://passzap.net/tools/design-tools/svg-converter'
+      canonical: 'https://freedevtools.studio/tools/design-tools/svg-converter'
     }
   },
   'font-converter': {
@@ -533,11 +677,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-pink-50',
     href: '/tools/design-tools/font-converter',
     seo: {
-      title: 'Font Converter - Convert Between Font Formats | PassZap',
+      title: 'Font Converter - Convert Between Font Formats | FreeDevTools Studio',
       description: 'Free online font converter tool. Convert between TTF, OTF, WOFF, WOFF2 font formats for web and desktop use.',
       keywords: 'font converter, ttf to woff, otf to woff2, font format converter',
       ogImage: '/og/font-converter-og.png',
-      canonical: 'https://passzap.net/tools/design-tools/font-converter'
+      canonical: 'https://freedevtools.studio/tools/design-tools/font-converter'
     }
   },
 
@@ -553,11 +697,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-teal-50',
     href: '/tools/media-tools/audio-trimmer',
     seo: {
-      title: 'Audio Trimmer - Cut & Trim Audio Files Online | PassZap',
+      title: 'Audio Trimmer - Cut & Trim Audio Files Online | FreeDevTools Studio',
       description: 'Free online audio trimmer tool. Cut and trim audio files with sample-accurate precision. Supports MP3, WAV, OGG, M4A and other formats. No uploads required.',
       keywords: 'audio trimmer, cut audio, trim audio, audio editor, audio cutter, mp3 trimmer, wav trimmer',
       ogImage: '/og/audio-trimmer-og.png',
-      canonical: 'https://passzap.net/tools/media-tools/audio-trimmer'
+      canonical: 'https://freedevtools.studio/tools/media-tools/audio-trimmer'
     }
   },
   'video-trimmer': {
@@ -571,11 +715,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-teal-50',
     href: '/tools/media-tools/video-trimmer',
     seo: {
-      title: 'Video Trimmer - Cut & Trim Video Files Online | PassZap',
+      title: 'Video Trimmer - Cut & Trim Video Files Online | FreeDevTools Studio',
       description: 'Free online video trimmer tool. Cut and trim video files directly in your browser. Supports MP4, WebM, MOV and other formats. No uploads required.',
       keywords: 'video trimmer, cut video, trim video, video editor, video cutter, mp4 trimmer, video editing',
       ogImage: '/og/video-trimmer-og.png',
-      canonical: 'https://passzap.net/tools/media-tools/video-trimmer'
+      canonical: 'https://freedevtools.studio/tools/media-tools/video-trimmer'
     }
   },
   'audio-joiner': {
@@ -589,11 +733,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-teal-50',
     href: '/tools/media-tools/audio-joiner',
     seo: {
-      title: 'Audio Joiner - Merge Audio Files Online | PassZap',
+      title: 'Audio Joiner - Merge Audio Files Online | FreeDevTools Studio',
       description: 'Free online audio joiner tool. Combine multiple audio files into one seamless track. Supports MP3, WAV, OGG, M4A and other formats. No uploads required.',
       keywords: 'audio joiner, merge audio, combine audio files, audio merger, join mp3, audio concatenation',
       ogImage: '/og/audio-joiner-og.png',
-      canonical: 'https://passzap.net/tools/media-tools/audio-joiner'
+      canonical: 'https://freedevtools.studio/tools/media-tools/audio-joiner'
     }
   },
   'pdf-tools': {
@@ -607,11 +751,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-teal-50',
     href: '/tools/media-tools/pdf-tools',
     seo: {
-      title: 'PDF Tools - Edit, Merge, Split & Compress PDFs | PassZap',
+      title: 'PDF Tools - Edit, Merge, Split & Compress PDFs | FreeDevTools Studio',
       description: 'Free online PDF tools. Merge, split, compress, and edit PDF files. All processing happens in your browser - no file uploads, complete privacy.',
       keywords: 'pdf tools, merge pdf, split pdf, compress pdf, edit pdf, pdf editor',
       ogImage: '/og/pdf-tools-og.png',
-      canonical: 'https://passzap.net/tools/media-tools/pdf-tools'
+      canonical: 'https://freedevtools.studio/tools/media-tools/pdf-tools'
     }
   },
 
@@ -627,11 +771,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-green-50',
     href: '/tools/utilities/calculator',
     seo: {
-      title: 'Scientific Calculator - Advanced Online Calculator | PassZap',
+      title: 'Scientific Calculator - Advanced Online Calculator | FreeDevTools Studio',
       description: 'Free online scientific calculator with advanced functions. Perform complex calculations, trigonometry, logarithms, and more.',
       keywords: 'calculator, scientific calculator, online calculator, math calculator, advanced calculator',
       ogImage: '/og/calculator-og.png',
-      canonical: 'https://passzap.net/tools/utilities/calculator'
+      canonical: 'https://freedevtools.studio/tools/utilities/calculator'
     }
   },
   'currency-converter': {
@@ -645,11 +789,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-green-50',
     href: '/tools/utilities/currency-converter',
     seo: {
-      title: 'Currency Converter - Live Exchange Rates | PassZap',
+      title: 'Currency Converter - Live Exchange Rates | FreeDevTools Studio',
       description: 'Free online currency converter tool. Convert between world currencies with live exchange rates. Supports USD, EUR, GBP, JPY, and many more.',
       keywords: 'currency converter, exchange rates, money converter, forex converter, usd converter, eur converter',
       ogImage: '/og/currency-converter-og.png',
-      canonical: 'https://passzap.net/tools/utilities/currency-converter'
+      canonical: 'https://freedevtools.studio/tools/utilities/currency-converter'
     }
   },
   'unit-converter': {
@@ -663,11 +807,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-green-50',
     href: '/tools/utilities/unit-converter',
     seo: {
-      title: 'Unit Converter - Convert Measurement Units Online | PassZap',
+      title: 'Unit Converter - Convert Measurement Units Online | FreeDevTools Studio',
       description: 'Free online unit converter tool. Convert between length, weight, temperature, volume, and other measurement units. Fast, accurate, and easy to use.',
       keywords: 'unit converter, measurement converter, length converter, weight converter, temperature converter',
       ogImage: '/og/unit-converter-og.png',
-      canonical: 'https://passzap.net/tools/utilities/unit-converter'
+      canonical: 'https://freedevtools.studio/tools/utilities/unit-converter'
     }
   },
   'stopwatch-timer': {
@@ -682,11 +826,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     href: '/tools/date-time-tools/stopwatch-timer',
     featured: true,
     seo: {
-      title: 'Stopwatch & Timer - Precision Timing Tools | PassZap',
+      title: 'Stopwatch & Timer - Precision Timing Tools | FreeDevTools Studio',
       description: 'Free online stopwatch and timer tools. Precision timing for workouts, cooking, presentations, and more. Easy to use and accurate.',
       keywords: 'stopwatch, timer, online stopwatch, countdown timer, timing tools',
       ogImage: '/og/stopwatch-timer-og.png',
-      canonical: 'https://passzap.net/tools/date-time-tools/stopwatch-timer'
+      canonical: 'https://freedevtools.studio/tools/date-time-tools/stopwatch-timer'
     }
   },
   'timezone-converter': {
@@ -701,11 +845,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     href: '/tools/date-time-tools/timezone-converter',
     featured: true,
     seo: {
-      title: 'Timezone Converter - Convert Time Between Timezones | PassZap',
+      title: 'Timezone Converter - Convert Time Between Timezones | FreeDevTools Studio',
       description: 'Free online timezone converter tool. Convert times between different timezones worldwide with daylight saving time support.',
       keywords: 'timezone converter, time zone converter, world time, time conversion, daylight saving time',
       ogImage: '/og/timezone-converter-og.png',
-      canonical: 'https://passzap.net/tools/date-time-tools/timezone-converter'
+      canonical: 'https://freedevtools.studio/tools/date-time-tools/timezone-converter'
     }
   },
 'epoch-converter': {
@@ -719,11 +863,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
   bgColor: 'bg-green-50',
   href: '/tools/date-time-tools/epoch-converter',
   seo: {
-    title: 'Epoch Converter - Unix Timestamp Converter | PassZap',
+    title: 'Epoch Converter - Unix Timestamp Converter | FreeDevTools Studio',
     description: 'Free online epoch timestamp converter. Convert Unix timestamps to human-readable dates and vice versa. Supports seconds, milliseconds, and microseconds.',
     keywords: 'epoch converter, unix timestamp converter, timestamp to date, date to timestamp, unix time',
     ogImage: '/og/epoch-converter-og.png',
-    canonical: 'https://passzap.net/tools/date-time-tools/epoch-converter'
+    canonical: 'https://freedevtools.studio/tools/date-time-tools/epoch-converter'
   }
 },
 'ldap-converter': {
@@ -737,11 +881,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
   bgColor: 'bg-green-50',
   href: '/tools/date-time-tools/ldap-converter',
   seo: {
-    title: 'LDAP Timestamp Converter - Active Directory Time Converter | PassZap',
+    title: 'LDAP Timestamp Converter - Active Directory Time Converter | FreeDevTools Studio',
     description: 'Free online LDAP timestamp converter. Convert LDAP/Active Directory timestamps (18-digit format) to human-readable dates and vice versa.',
     keywords: 'ldap timestamp converter, active directory timestamp, ldap time, windows time converter, 18-digit timestamp',
     ogImage: '/og/ldap-converter-og.png',
-    canonical: 'https://passzap.net/tools/date-time-tools/ldap-converter'
+    canonical: 'https://freedevtools.studio/tools/date-time-tools/ldap-converter'
   }
 },
 'unix-hex-converter': {
@@ -755,11 +899,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
   bgColor: 'bg-green-50',
   href: '/tools/date-time-tools/unix-hex-converter',
   seo: {
-    title: 'Unix Hex Timestamp Converter - Hexadecimal Timestamp Converter | PassZap',
+    title: 'Unix Hex Timestamp Converter - Hexadecimal Timestamp Converter | FreeDevTools Studio',
     description: 'Free online Unix hex timestamp converter. Convert hexadecimal Unix timestamps to human-readable dates and vice versa.',
     keywords: 'unix hex converter, hexadecimal timestamp, hex to date, timestamp hex converter',
     ogImage: '/og/unix-hex-converter-og.png',
-    canonical: 'https://passzap.net/tools/date-time-tools/unix-hex-converter'
+    canonical: 'https://freedevtools.studio/tools/date-time-tools/unix-hex-converter'
   }
 },
 
@@ -776,11 +920,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     href: '/tools/system-tools/ip-tools',
     featured: true,
     seo: {
-      title: 'IP Address Tools - IP Lookup & Network Utilities | PassZap',
+      title: 'IP Address Tools - IP Lookup & Network Utilities | FreeDevTools Studio',
       description: 'Free online IP address tools. IP lookup, subnet calculator, network diagnostics, and more networking utilities.',
       keywords: 'ip tools, ip lookup, subnet calculator, network tools, ip address tools',
       ogImage: '/og/ip-tools-og.png',
-      canonical: 'https://passzap.net/tools/system-tools/ip-tools'
+      canonical: 'https://freedevtools.studio/tools/system-tools/ip-tools'
     }
   },
   'network-tools': {
@@ -794,11 +938,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-orange-50',
     href: '/tools/system-tools/network-tools',
     seo: {
-      title: 'Network Tools - Ping, Traceroute & Diagnostics | PassZap',
+      title: 'Network Tools - Ping, Traceroute & Diagnostics | FreeDevTools Studio',
       description: 'Free online network tools including ping, traceroute, and network diagnostics. Check connectivity and troubleshoot network issues.',
       keywords: 'network tools, ping tool, traceroute, network diagnostics, connectivity test',
       ogImage: '/og/network-tools-og.png',
-      canonical: 'https://passzap.net/tools/system-tools/network-tools'
+      canonical: 'https://freedevtools.studio/tools/system-tools/network-tools'
     }
   },
 
@@ -814,11 +958,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-indigo-50',
     href: '/tools/cheatsheets/bash',
     seo: {
-      title: 'Bash Cheat Sheet - Essential Terminal Commands | PassZap',
+      title: 'Bash Cheat Sheet - Essential Terminal Commands | FreeDevTools Studio',
       description: 'Comprehensive Bash cheat sheet with essential terminal commands, one-liners, and shell scripting tips for Linux and macOS.',
       keywords: 'bash cheat sheet, terminal commands, linux commands, shell scripting, command line',
       ogImage: '/og/bash-cheatsheet-og.png',
-      canonical: 'https://passzap.net/tools/cheatsheets/bash'
+      canonical: 'https://freedevtools.studio/tools/cheatsheets/bash'
     }
   },
   'sed-awk': {
@@ -832,11 +976,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-indigo-50',
     href: '/tools/cheatsheets/sed-awk',
     seo: {
-      title: 'Sed & Awk Cheat Sheet - Text Processing Commands | PassZap',
+      title: 'Sed & Awk Cheat Sheet - Text Processing Commands | FreeDevTools Studio',
       description: 'Comprehensive Sed and Awk cheat sheet with powerful text processing commands, patterns, and examples for advanced text manipulation.',
       keywords: 'sed cheat sheet, awk cheat sheet, text processing, linux commands, regex',
       ogImage: '/og/sed-awk-cheatsheet-og.png',
-      canonical: 'https://passzap.net/tools/cheatsheets/sed-awk'
+      canonical: 'https://freedevtools.studio/tools/cheatsheets/sed-awk'
     }
   },
   'regex': {
@@ -850,11 +994,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-indigo-50',
     href: '/tools/cheatsheets/regex',
     seo: {
-      title: 'Regex Cheat Sheet - Common Patterns and Examples | PassZap',
+      title: 'Regex Cheat Sheet - Common Patterns and Examples | FreeDevTools Studio',
       description: 'Comprehensive Regex cheat sheet with powerful text matching and validation patterns and examples for advanced text manipulation.',
       keywords: 'regex, regular expressions, patterns, validation, cheatsheet',
       ogImage: '/og/regex-cheatsheet-og.png',
-      canonical: 'https://passzap.net/tools/cheatsheets/regex'
+      canonical: 'https://freedevtools.studio/tools/cheatsheets/regex'
     }
   },
   'python': {
@@ -868,11 +1012,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-indigo-50',
     href: '/tools/cheatsheets/python',
     seo: {
-      title: 'Python Cheat Sheet - Quick Reference & Snippets | PassZap',
+      title: 'Python Cheat Sheet - Quick Reference & Snippets | FreeDevTools Studio',
       description: 'Comprehensive Python cheat sheet with quick reference, common snippets, and examples for Python programming and data science.',
       keywords: 'python cheat sheet, python reference, python snippets, programming cheat sheet',
       ogImage: '/og/python-cheatsheet-og.png',
-      canonical: 'https://passzap.net/tools/cheatsheets/python'
+      canonical: 'https://freedevtools.studio/tools/cheatsheets/python'
     }
   },
   'powershell': {
@@ -886,11 +1030,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-indigo-50',
     href: '/tools/cheatsheets/powershell',
     seo: {
-      title: 'PowerShell Cheat Sheet - Windows Administration | PassZap',
+      title: 'PowerShell Cheat Sheet - Windows Administration | FreeDevTools Studio',
       description: 'Comprehensive PowerShell cheat sheet with Windows administration commands, scripting tips, and system management examples.',
       keywords: 'powershell cheat sheet, windows commands, administration, scripting, windows powershell',
       ogImage: '/og/powershell-cheatsheet-og.png',
-      canonical: 'https://passzap.net/tools/cheatsheets/powershell'
+      canonical: 'https://freedevtools.studio/tools/cheatsheets/powershell'
     }
   },
   'git': {
@@ -904,11 +1048,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-indigo-50',
     href: '/tools/cheatsheets/git',
     seo: {
-      title: 'Git Cheat Sheet - Essential Git Commands & Workflows | PassZap',
+      title: 'Git Cheat Sheet - Essential Git Commands & Workflows | FreeDevTools Studio',
       description: 'Comprehensive Git cheat sheet with essential commands, branching strategies, workflows, and version control best practices.',
       keywords: 'git cheat sheet, git commands, version control, github, git workflow',
       ogImage: '/og/git-cheatsheet-og.png',
-      canonical: 'https://passzap.net/tools/cheatsheets/git'
+      canonical: 'https://freedevtools.studio/tools/cheatsheets/git'
     }
   },
   'docker': {
@@ -922,11 +1066,11 @@ export const toolsConfig: Record<string, ToolConfig> = {
     bgColor: 'bg-indigo-50',
     href: '/tools/cheatsheets/docker',
     seo: {
-      title: 'Docker Cheat Sheet - Container Management Commands | PassZap',
+      title: 'Docker Cheat Sheet - Container Management Commands | FreeDevTools Studio',
       description: 'Comprehensive Docker cheat sheet with container management commands, Dockerfile examples, and orchestration tips.',
       keywords: 'docker cheat sheet, docker commands, container management, dockerfile, containerization',
       ogImage: '/og/docker-cheatsheet-og.png',
-      canonical: 'https://passzap.net/tools/cheatsheets/docker'
+      canonical: 'https://freedevtools.studio/tools/cheatsheets/docker'
     }
   }
 };

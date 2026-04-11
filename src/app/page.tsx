@@ -1,125 +1,159 @@
 // app/page.tsx
 'use client'
 
-import { Sparkles, Shield, Users, Globe, ArrowRight } from 'lucide-react'
+import {
+  ArrowRight,
+  Compass,
+  Globe,
+  Search,
+  Shield,
+  Sparkles,
+  Users,
+} from 'lucide-react'
 import ToolCard from '@/components/ui/ToolCard'
-import { 
-  getAllTools, 
-  getPopularCategories, 
-  getAllCategories,
-  getUtilitiesGroupedByCategory 
-} from '@/config/tools-config';
-import PasswordGenerator from '@/components/tools/security/password-generator/password-generator-tool'
+import { getAllCategories, getAllTools, getPopularCategories, type ToolConfig } from '@/config/tools-config'
 
 export default function Home() {
-  const utilities = getAllTools()
-  const allCategories = getAllCategories().map(cat => ({
-    key: cat.id,
-    name: cat.name,
-    icon: cat.icon,
-    path: `/tools/${cat.id}`,
-    toolCount: cat.tools.length
-  }))
-  const groupedUtilities = getUtilitiesGroupedByCategory()
-  
-  const featuredTools = utilities.filter(tool => tool.featured).slice(0, 4)
+  const allTools = getAllTools()
+  const allFeaturedTools = allTools.filter((tool) => tool.featured)
+  const featuredToolCount = allFeaturedTools.length >= 8 ? 8 : allFeaturedTools.length >= 4 ? 4 : allFeaturedTools.length
+  const featuredTools = allFeaturedTools.slice(0, featuredToolCount)
+  const popularCategories = getPopularCategories(6)
+  const allCategories = getAllCategories()
+
+  const quickStarts = [
+    allTools.find((tool) => tool.id === 'json-formatter'),
+    allTools.find((tool) => tool.id === 'qr-generator'),
+    allTools.find((tool) => tool.id === 'image-resizer'),
+    allTools.find((tool) => tool.id === 'currency-converter'),
+    allTools.find((tool) => tool.id === 'file-hash'),
+    allTools.find((tool) => tool.id === 'audio-trimmer'),
+  ].filter((tool): tool is ToolConfig => Boolean(tool))
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-4xl mx-auto">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-100 border border-emerald-200 mb-6">
-            <Sparkles className="h-4 w-4 text-emerald-600 mr-2" />
-            <span className="text-sm font-medium text-emerald-700">100% Free • No Registration</span>
-          </div>
-          
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            All Your
-            <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent"> Utilities </span>
-            in One Place
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Free online tools for developers, designers, and everyday users. 
-            Clean, fast, and completely free - no strings attached.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <div className="flex items-center text-emerald-600">
-              <Shield className="h-5 w-5 mr-2" />
-              <span className="text-sm font-medium">100% Secure & Local</span>
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top,#d1fae5,transparent_28%),linear-gradient(180deg,#ecfdf5_0%,#f0fdfa_42%,#ffffff_100%)]">
+      <section className="relative overflow-hidden px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+            <div>
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/80 px-4 py-2 text-sm font-medium text-emerald-700 shadow-sm">
+                <Sparkles className="h-4 w-4" />
+                FreeDevTools Studio
+              </div>
+
+              <h1 className="max-w-4xl text-5xl font-bold tracking-tight text-gray-900 md:text-6xl">
+                Free online tools for building, debugging, converting, and creating.
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-600">
+                Browse developer utilities, design tools, media processors, calculators, and quick
+                converters in one place. Fast to use, easy to search, and built for one-off tasks.
+              </p>
+
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <a
+                  href="/tools"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-6 py-4 font-medium text-white shadow-lg shadow-emerald-200 transition-colors hover:bg-emerald-700"
+                >
+                  Browse All Tools
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+                <a
+                  href="#categories"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-emerald-200 bg-white px-6 py-4 font-medium text-emerald-700 transition-colors hover:border-emerald-300 hover:bg-emerald-50"
+                >
+                  Explore Categories
+                  <Compass className="h-4 w-4" />
+                </a>
+              </div>
+
+              <div className="mt-10 grid gap-3 sm:grid-cols-3">
+                <div className="rounded-2xl border border-white/70 bg-white/80 p-4 shadow-sm">
+                  <Shield className="mb-3 h-5 w-5 text-emerald-600" />
+                  <p className="text-sm font-semibold text-gray-900">Private by default</p>
+                  <p className="mt-1 text-sm text-gray-600">Many tools run directly in your browser.</p>
+                </div>
+                <div className="rounded-2xl border border-white/70 bg-white/80 p-4 shadow-sm">
+                  <Users className="mb-3 h-5 w-5 text-emerald-600" />
+                  <p className="text-sm font-semibold text-gray-900">No account required</p>
+                  <p className="mt-1 text-sm text-gray-600">Open a tool and start immediately.</p>
+                </div>
+                <div className="rounded-2xl border border-white/70 bg-white/80 p-4 shadow-sm">
+                  <Globe className="mb-3 h-5 w-5 text-emerald-600" />
+                  <p className="text-sm font-semibold text-gray-900">Wide tool coverage</p>
+                  <p className="mt-1 text-sm text-gray-600">
+                    {allTools.length}+ tools across {allCategories.length} categories.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="flex items-center text-emerald-600">
-              <Users className="h-5 w-5 mr-2" />
-              <span className="text-sm font-medium">No Registration</span>
-            </div>
-            <div className="flex items-center text-emerald-600">
-              <Globe className="h-5 w-5 mr-2" />
-              <span className="text-sm font-medium">Works Offline</span>
+
+            <div className="rounded-3xl border border-emerald-100 bg-white/85 p-6 shadow-xl shadow-emerald-100 backdrop-blur-sm">
+              <div className="mb-5 flex items-center gap-3">
+                <div className="rounded-xl bg-emerald-100 p-3">
+                  <Search className="h-5 w-5 text-emerald-700" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">
+                    Start Here
+                  </p>
+                  <h2 className="text-2xl font-bold text-gray-900">Jump into a common task</h2>
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                {quickStarts.map((tool) => (
+                  <a
+                    key={tool.id}
+                    href={tool.href}
+                    className="flex items-start justify-between gap-4 rounded-2xl border border-emerald-100 px-4 py-4 transition-all hover:border-emerald-300 hover:bg-emerald-50"
+                  >
+                    <div>
+                      <p className="text-base font-semibold text-gray-900">{tool.name}</p>
+                      <p className="mt-1 text-sm text-gray-600">{tool.description}</p>
+                    </div>
+                    <ArrowRight className="mt-1 h-4 w-4 flex-shrink-0 text-emerald-600" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Password Generator Section */}
-      <section id="generator" className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <PasswordGenerator compact />
-        </div>
-      </section>
-
-      {/* Featured Tools Section */}
-      {featuredTools.length > 0 && (
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Featured</span> Tools
-              </h2>
-              <p className="text-xl text-gray-600">Most popular and useful tools</p>
+      <section id="categories" className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">
+                Explore by Category
+              </p>
+              <h2 className="mt-3 text-4xl font-bold text-gray-900">Find the right tool family first</h2>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {featuredTools.map((utility) => (
-                <ToolCard key={utility.name} {...utility} />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Categories Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Browse by <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Category</span>
-            </h2>
-            <p className="text-xl text-gray-600">Find the perfect tools for your needs</p>
+            <a href="/tools" className="text-sm font-medium text-emerald-700 hover:text-emerald-800">
+              See the full directory
+            </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {allCategories.map((category) => (
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {popularCategories.map((category) => (
               <a
                 key={category.key}
                 href={category.path}
-                className="group bg-white rounded-xl p-6 shadow-lg border border-emerald-100 hover:border-emerald-300 transition-all hover:shadow-xl"
+                className="group rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-emerald-300 hover:shadow-xl"
               >
-                <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg mb-4 group-hover:scale-110 transition-transform">
-                    <category.icon className="h-6 w-6 text-white" />
+                <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white">
+                  <category.icon className="h-6 w-6" />
+                </div>
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 group-hover:text-emerald-700">
+                      {category.name}
+                    </h3>
+                    <p className="mt-3 text-sm leading-6 text-gray-600">{category.description}</p>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">
-                    {category.name}
-                  </h3>
-                  <p className="text-sm text-gray-600 mb-3">
-                    {category.toolCount} {category.toolCount === 1 ? 'tool' : 'tools'} available
-                  </p>
-                  <div className="flex items-center justify-center text-emerald-600 text-sm font-medium">
-                    <span>Explore</span>
-                    <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </div>
+                  <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">
+                    {category.toolCount} tools
+                  </span>
                 </div>
               </a>
             ))}
@@ -127,32 +161,85 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12">Why Choose PassZap?</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl mb-4 shadow-lg mx-auto">
-                <Shield className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">100% Secure</h3>
-              <p className="text-gray-600">All processing happens locally in your browser</p>
+      {featuredTools.length > 0 && (
+        <section className="px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-12 text-center">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">
+                Popular Picks
+              </p>
+              <h2 className="mt-3 text-4xl font-bold text-gray-900">Featured tools across the site</h2>
+              <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+                Jump into the tools people use most for quick formatting, generation, conversion,
+                and lightweight editing tasks.
+              </p>
             </div>
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl mb-4 shadow-lg mx-auto">
-                <Users className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">No Registration</h3>
-              <p className="text-gray-600">Start using immediately without signing up</p>
+
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+              {featuredTools.map((tool) => (
+                <ToolCard key={tool.id} {...tool} />
+              ))}
             </div>
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl mb-4 shadow-lg mx-auto">
-                <Globe className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Works Offline</h3>
-              <p className="text-gray-600">Most tools work without internet connection</p>
+          </div>
+        </section>
+      )}
+
+      <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl rounded-[2rem] border border-emerald-100 bg-white p-8 shadow-sm lg:p-10">
+          <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">
+                Common Workflows
+              </p>
+              <h2 className="mt-3 text-4xl font-bold text-gray-900">Start with what you need to do</h2>
             </div>
+            <p className="max-w-2xl text-gray-600">
+              The homepage should help people land on a task quickly, not force one tool to dominate
+              the story.
+            </p>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <a
+              href="/tools/developer/json-formatter"
+              className="rounded-2xl border border-emerald-100 bg-emerald-50/60 p-5 transition-colors hover:border-emerald-300 hover:bg-emerald-50"
+            >
+              <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">Format Code</p>
+              <h3 className="mt-2 text-xl font-semibold text-gray-900">Clean up JSON and source text</h3>
+              <p className="mt-3 text-sm leading-6 text-gray-600">
+                Open formatter tools for JSON, SQL, CSS, JavaScript, and regex testing.
+              </p>
+            </a>
+            <a
+              href="/tools/design-tools/qr-generator"
+              className="rounded-2xl border border-emerald-100 bg-emerald-50/60 p-5 transition-colors hover:border-emerald-300 hover:bg-emerald-50"
+            >
+              <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">Create Assets</p>
+              <h3 className="mt-2 text-xl font-semibold text-gray-900">Generate QR codes and UI resources</h3>
+              <p className="mt-3 text-sm leading-6 text-gray-600">
+                Build QR codes, color palettes, gradients, icons, and other design-ready assets.
+              </p>
+            </a>
+            <a
+              href="/tools/graphics/image-resizer"
+              className="rounded-2xl border border-emerald-100 bg-emerald-50/60 p-5 transition-colors hover:border-emerald-300 hover:bg-emerald-50"
+            >
+              <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">Edit Media</p>
+              <h3 className="mt-2 text-xl font-semibold text-gray-900">Resize, compress, and trim files</h3>
+              <p className="mt-3 text-sm leading-6 text-gray-600">
+                Use browser-based image, audio, video, and PDF tools for quick cleanup work.
+              </p>
+            </a>
+            <a
+              href="/tools/utilities/calculator"
+              className="rounded-2xl border border-emerald-100 bg-emerald-50/60 p-5 transition-colors hover:border-emerald-300 hover:bg-emerald-50"
+            >
+              <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">Convert & Calculate</p>
+              <h3 className="mt-2 text-xl font-semibold text-gray-900">Handle numbers, units, and time</h3>
+              <p className="mt-3 text-sm leading-6 text-gray-600">
+                Reach calculators, unit converters, currency tools, and timezone utilities fast.
+              </p>
+            </a>
           </div>
         </div>
       </section>

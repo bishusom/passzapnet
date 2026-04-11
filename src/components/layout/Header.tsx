@@ -60,7 +60,7 @@ export default function Header() {
             </div>
             <div>
               <div className="text-2xl font-bold text-gray-900 group-hover:text-emerald-600 transition-colors">
-                PassZap
+                FreeDevTools Studio
               </div>
               <p className="text-sm text-emerald-600 font-medium">Free Online Utilities</p>
             </div>

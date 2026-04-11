@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next'
 import { getAllCategories, getAllTools } from '@/config/tools-config'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://passzap.net'
+  const baseUrl = 'https://freedevtools.studio'
   const allCategories = getAllCategories()
   const allTools = getAllTools()
   

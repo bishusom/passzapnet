@@ -5,11 +5,11 @@ import { FileText, Scale, AlertTriangle, CheckCircle, Shield } from 'lucide-reac
 const LAST_UPDATED = 'April 6, 2026';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service - PassZap Tools',
-  description: 'Terms and conditions for using PassZap online tools. Learn about acceptable use, limitations, and user responsibilities.',
+  title: 'Terms of Service - FreeDevTools Studio',
+  description: 'Terms and conditions for using FreeDevTools Studio online tools. Learn about acceptable use, limitations, and user responsibilities.',
   keywords: 'terms of service, terms and conditions, user agreement',
   alternates: {
-    canonical: 'https://passzap.net/terms-of-service',
+    canonical: 'https://freedevtools.studio/terms-of-service',
   },
 };
 
@@ -38,7 +38,7 @@ export default function TermsOfServicePage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Acceptance of Terms</h2>
                 <p className="text-gray-700 mb-4">
-                  By accessing and using PassZap ("the Service"), you accept and agree to be bound by 
+                  By accessing and using FreeDevTools Studio ("the Service"), you accept and agree to be bound by 
                   the terms and provision of this agreement. If you do not agree to these terms, please 
                   do not use our services.
                 </p>
@@ -54,7 +54,7 @@ export default function TermsOfServicePage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Service Description</h2>
                 <p className="text-gray-700 mb-4">
-                  PassZap provides online utilities and tools including but not limited to:
+                  FreeDevTools Studio provides online utilities and tools including but not limited to:
                 </p>
                 <div className="grid md:grid-cols-2 gap-4 mb-4">
                   <div className="bg-gray-50 p-4 rounded-lg">
@@ -131,7 +131,7 @@ export default function TermsOfServicePage() {
                   <div className="bg-gray-50 p-4 rounded-lg">
                     <h3 className="font-semibold text-gray-900 mb-2">Our Rights</h3>
                     <p className="text-gray-700 text-sm">
-                      PassZap and its original content, features, and functionality are owned by PassZap 
+                      FreeDevTools Studio and its original content, features, and functionality are owned by FreeDevTools Studio 
                       and are protected by international copyright, trademark, and other intellectual 
                       property laws.
                     </p>
@@ -150,7 +150,7 @@ export default function TermsOfServicePage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Disclaimer of Warranties</h2>
                 <p className="text-gray-700 mb-4">
-                  The Service is provided on an "AS IS" and "AS AVAILABLE" basis. PassZap makes no 
+                  The Service is provided on an "AS IS" and "AS AVAILABLE" basis. FreeDevTools Studio makes no 
                   representations or warranties of any kind, express or implied, including but not limited to:
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-700">
@@ -165,7 +165,7 @@ export default function TermsOfServicePage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Limitation of Liability</h2>
                 <p className="text-gray-700 mb-4">
-                  To the fullest extent permitted by law, PassZap shall not be liable for any indirect, 
+                  To the fullest extent permitted by law, FreeDevTools Studio shall not be liable for any indirect, 
                   incidental, special, consequential, or punitive damages, including without limitation:
                 </p>
                 <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-4">
@@ -242,7 +242,7 @@ export default function TermsOfServicePage() {
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">10. Governing Law</h2>
                 <p className="text-gray-700">
                   These Terms shall be governed and construed in accordance with the laws of the 
-                  jurisdiction where PassZap is established, without regard to its conflict of law provisions.
+                  jurisdiction where FreeDevTools Studio is established, without regard to its conflict of law provisions.
                 </p>
               </section>
 
@@ -254,7 +254,7 @@ export default function TermsOfServicePage() {
                 </p>
                 <div className="bg-gray-50 p-4 rounded-lg mt-4">
                   <p className="text-gray-700">
-                    Email: legal@passzap.net<br />
+                    Email: legal@freedevtools.studio<br />
                     We aim to respond to all inquiries within 48 hours.
                   </p>
                 </div>

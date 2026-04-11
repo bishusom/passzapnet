@@ -3,32 +3,32 @@ import type { Metadata } from 'next';
 import { HelpCircle, Search, FileText, Code, Shield, Download } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Frequently Asked Questions - PassZap Tools',
-  description: 'Find answers to common questions about PassZap tools, features, security, and usage. For further questions contact us via our contact page',
-  keywords: 'FAQ, frequently asked questions, help, support, PassZap tools',
+  title: 'Frequently Asked Questions - FreeDevTools Studio',
+  description: 'Find answers to common questions about FreeDevTools Studio tools, features, security, and usage. For further questions contact us via our contact page',
+  keywords: 'FAQ, frequently asked questions, help, support, FreeDevTools Studio tools',
   openGraph: {
-    title: 'Frequently Asked Questions - PassZap Tools',
-    description: 'Find answers to common questions about PassZap tools, features, security, and usage.',
-    url: 'https://passzap.net/faq',
-    siteName: 'PassZap',
+    title: 'Frequently Asked Questions - FreeDevTools Studio',
+    description: 'Find answers to common questions about FreeDevTools Studio tools, features, security, and usage.',
+    url: 'https://freedevtools.studio/faq',
+    siteName: 'FreeDevTools Studio',
     images: [
       {
-        url: 'https://passzap.net/og-image.png',
+        url: 'https://freedevtools.studio/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'PassZap FAQ',
+        alt: 'FreeDevTools Studio FAQ',
       },
     ],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Frequently Asked Questions - PassZap Tools',
-    description: 'Find answers to common questions about PassZap tools, features, security, and usage.',
-    images: ['https://passzap.net/og-image.png'],
+    title: 'Frequently Asked Questions - FreeDevTools Studio',
+    description: 'Find answers to common questions about FreeDevTools Studio tools, features, security, and usage.',
+    images: ['https://freedevtools.studio/og-image.png'],
   },
   alternates: {
-    canonical: 'https://passzap.net/faq',
+    canonical: 'https://freedevtools.studio/faq',
   },
 };
 
@@ -39,11 +39,11 @@ export default function FAQPage() {
       icon: HelpCircle,
       questions: [
         {
-          question: 'What is PassZap?',
-          answer: 'PassZap is a collection of free online tools for developers and content creators, including QR code generators, code formatters, file utilities, and more. All tools are designed to work entirely in your browser for maximum privacy.'
+          question: 'What is FreeDevTools Studio?',
+          answer: 'FreeDevTools Studio is a collection of free online tools for developers and content creators, including QR code generators, code formatters, file utilities, and more. All tools are designed to work entirely in your browser for maximum privacy.'
         },
         {
-          question: 'Is PassZap free to use?',
+          question: 'Is FreeDevTools Studio free to use?',
           answer: 'Yes! All our tools are completely free to use. There are no hidden fees, subscriptions, or usage limits. We believe in providing valuable tools to the community without barriers.'
         },
         {
@@ -52,7 +52,7 @@ export default function FAQPage() {
         },
         {
           question: 'What browsers are supported?',
-          answer: 'PassZap works on all modern browsers including Chrome, Firefox, Safari, Edge, and Opera. We recommend using the latest browser versions for the best experience and security.'
+          answer: 'FreeDevTools Studio works on all modern browsers including Chrome, Firefox, Safari, Edge, and Opera. We recommend using the latest browser versions for the best experience and security.'
         }
       ]
     },
@@ -160,7 +160,7 @@ export default function FAQPage() {
             </div>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Find quick answers to common questions about PassZap tools and services.
+              Find quick answers to common questions about FreeDevTools Studio tools and services.
             </p>
             
             {/* Search Bar */}

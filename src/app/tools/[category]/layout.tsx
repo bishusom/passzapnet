@@ -24,25 +24,25 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${categoryData.name} Tools - Free Online Utilities | PassZap`,
+    title: `${categoryData.name} Tools - Free Online Utilities | FreeDevTools Studio`,
     description: `${categoryData.description}. Browse ${categoryData.toolCount} free tools in this category.`,
     keywords: `${categoryData.name.toLowerCase()} tools, ${categoryData.name.toLowerCase()} utilities, online ${categoryData.name.toLowerCase()}`,
     alternates: {
-      canonical: `https://passzap.net/tools/${category}`,
+      canonical: `https://freedevtools.studio/tools/${category}`,
     },
     openGraph: {
-      title: `${categoryData.name} Tools - Free Online Utilities | PassZap`,
+      title: `${categoryData.name} Tools - Free Online Utilities | FreeDevTools Studio`,
       description: `${categoryData.description}. Browse ${categoryData.toolCount} free tools in this category.`,
-      url: `https://passzap.net/tools/${category}`,
-      siteName: 'PassZap',
+      url: `https://freedevtools.studio/tools/${category}`,
+      siteName: 'FreeDevTools Studio',
       locale: 'en_US',
       type: 'website',
       images: [
         {
-          url: 'https://passzap.net/og-image.png',
+          url: 'https://freedevtools.studio/og-image.png',
           width: 1200,
           height: 630,
-          alt: `${categoryData.name} tools on PassZap`,
+          alt: `${categoryData.name} tools on FreeDevTools Studio`,
         },
       ],
     },

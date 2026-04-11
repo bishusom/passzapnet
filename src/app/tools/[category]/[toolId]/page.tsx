@@ -48,7 +48,7 @@ export default async function ToolPage({
             <div className="rounded-xl bg-emerald-50 p-4">
               <h2 className="mb-2 text-lg font-semibold text-gray-900">Privacy</h2>
               <p className="text-sm leading-6 text-gray-700">
-                PassZap tools are designed to run in the browser so your content stays on your device whenever possible.
+                FreeDevTools Studio tools are designed to run in the browser so your content stays on your device whenever possible.
               </p>
             </div>
             <div className="rounded-xl bg-emerald-50 p-4">

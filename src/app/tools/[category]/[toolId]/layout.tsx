@@ -36,12 +36,12 @@ export async function generateMetadata({
       title: toolConfig.seo.title,
       description: toolConfig.seo.description,
       url: toolConfig.seo.canonical,
-      siteName: 'PassZap',
+      siteName: 'FreeDevTools Studio',
       locale: 'en_US',
       type: 'website',
       images: [
         {
-          url: `https://passzap.net${toolConfig.seo.ogImage}`,
+          url: `https://freedevtools.studio${toolConfig.seo.ogImage}`,
           width: 1200,
           height: 630,
           alt: `${toolConfig.name} preview image`,
@@ -52,7 +52,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: toolConfig.seo.title,
       description: toolConfig.seo.description,
-      images: [`https://passzap.net${toolConfig.seo.ogImage}`],
+      images: [`https://freedevtools.studio${toolConfig.seo.ogImage}`],
     },
   };
 }

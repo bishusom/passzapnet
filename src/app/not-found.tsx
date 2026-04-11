@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { Home, Search, ArrowRight, FileQuestion, Zap } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Page Not Found - 404 Error | PassZap',
-  description: 'The page you are looking for does not exist. Return to PassZap home page or explore our tools.',
+  title: 'Page Not Found - 404 Error | FreeDevTools Studio',
+  description: 'The page you are looking for does not exist. Return to the FreeDevTools Studio home page or explore our tools.',
 };
 
 export default function NotFound() {

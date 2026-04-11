@@ -16,7 +16,7 @@ export default function Footer() {
                 <Sparkles className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900">PassZap</h3>
+                <h3 className="text-xl font-bold text-gray-900">FreeDevTools Studio</h3>
                 <p className="text-emerald-600 font-medium">Free Online Utilities</p>
               </div>
             </div>
@@ -55,7 +55,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="border-t border-gray-200 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            © {currentYear} PassZap. All rights reserved.
+            © {currentYear} FreeDevTools Studio. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <a href="https://github.com/bishusom" className="text-gray-400 hover:text-emerald-600 transition-colors">

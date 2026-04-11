@@ -481,6 +481,6 @@ const faqItems = [
   },
   {
     question: "Can I use this on mobile devices?",
-    answer: "Absolutely! PassZap is fully responsive and works perfectly on smartphones, tablets, and desktop computers. All features are available on mobile."
+    answer: "Absolutely! FreeDevTools Studio is fully responsive and works perfectly on smartphones, tablets, and desktop computers. All features are available on mobile."
   }
 ]

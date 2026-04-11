@@ -5,11 +5,11 @@ import { Shield, Lock, Eye, User, Mail, Database } from 'lucide-react';
 const LAST_UPDATED = 'April 6, 2026';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy - PassZap Tools',
-  description: 'Learn how PassZap protects your privacy and handles your data. We are committed to transparency and data security.',
+  title: 'Privacy Policy - FreeDevTools Studio',
+  description: 'Learn how FreeDevTools Studio protects your privacy and handles your data. We are committed to transparency and data security.',
   keywords: 'privacy policy, data protection, GDPR, privacy, security',
   alternates: {
-    canonical: 'https://passzap.net/privacy-policy',
+    canonical: 'https://freedevtools.studio/privacy-policy',
   },
 };
 
@@ -38,7 +38,7 @@ export default function PrivacyPolicyPage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2>
                 <p className="text-gray-700 mb-4">
-                  Welcome to PassZap. We are committed to protecting your privacy and ensuring transparency 
+                  Welcome to FreeDevTools Studio. We are committed to protecting your privacy and ensuring transparency 
                   about how we handle your data. This Privacy Policy explains how we collect, use, and protect 
                   your information when you use our online tools and services.
                 </p>
@@ -209,7 +209,7 @@ export default function PrivacyPolicyPage() {
                 </p>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <p className="text-gray-700">
-                    Email: privacy@passzap.net<br />
+                    Email: privacy@freedevtools.studio<br />
                     Response time: Within 48 hours
                   </p>
                 </div>

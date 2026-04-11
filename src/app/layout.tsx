@@ -6,8 +6,8 @@ import Footer from '@/components/layout/Footer'
 import { Breadcrumbs } from './../components/layout/Breadcrumbs'; 
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://passzap.net'),
-  title: 'PassZap - Free Online Utilities & Tools for Developers',
+  metadataBase: new URL('https://freedevtools.studio'),
+  title: 'FreeDevTools Studio - Free Online Utilities & Tools for Developers',
   description: 'Free online tools including password generator, stopwatch, unit converter, calculator, color picker, currency converter, and more developer utilities.',
   keywords: 'password generator, online tools, unit converter, calculator, developer utilities',
   robots: {
@@ -15,16 +15,16 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: 'PassZap - Free Online Utilities & Tools for Developers',
+    title: 'FreeDevTools Studio - Free Online Utilities & Tools for Developers',
     description: 'Free online tools including password generator, stopwatch, unit converter, calculator, color picker, currency converter, and more developer utilities.',
-    url: 'https://passzap.net',
-    siteName: 'PassZap',
+    url: 'https://freedevtools.studio',
+    siteName: 'FreeDevTools Studio',
     images: [
       {
-        url: 'https://passzap.net/og-image.png',
+        url: 'https://freedevtools.studio/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'PassZap Open Graph Image',
+        alt: 'FreeDevTools Studio Open Graph Image',
       },
     ],
     locale: 'en_US',
@@ -32,12 +32,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'PassZap - Free Online Utilities & Tools for Developers',
+    title: 'FreeDevTools Studio - Free Online Utilities & Tools for Developers',
     description: 'Free online tools including password generator, stopwatch, unit converter, calculator, color picker, currency converter, and more developer utilities.',
-    images: ['https://passzap.net/og-image.png'],
+    images: ['https://freedevtools.studio/og-image.png'],
   },
   alternates: {
-    canonical: 'https://passzap.net',
+    canonical: 'https://freedevtools.studio',
   },
 }
 
@@ -58,8 +58,8 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "PassZap",
-              "url": "https://passzap.net",
+              "name": "FreeDevTools Studio",
+              "url": "https://freedevtools.studio",
               "description": "Free online utilities and tools for developers and everyday use"
             })
           }}

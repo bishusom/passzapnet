@@ -2,7 +2,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'All Tools - Free Online Developer Tools | PassZap',
+  title: 'All Tools - Free Online Developer Tools | FreeDevTools Studio',
   description: 'Discover our collection of free online tools for developers, designers, and creators.',
 };
 

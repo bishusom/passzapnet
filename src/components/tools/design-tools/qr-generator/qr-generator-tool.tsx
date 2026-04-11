@@ -38,7 +38,7 @@ interface ContactInfo {
 }
 
 export default function QrCodeGenerator() {
-  const [content, setContent] = useState<string>('passzap.net');
+  const [content, setContent] = useState<string>('freedevtools.studio');
   const [qrType, setQrType] = useState<QrCodeType>('url');
   const [size, setSize] = useState<number>(256);
   const [foregroundColor, setForegroundColor] = useState<string>('#000000');
@@ -167,7 +167,7 @@ export default function QrCodeGenerator() {
   };
 
   const resetForm = () => {
-    setContent('passzap.net');
+    setContent('freedevtools.studio');
     setQrCodeUrl('');
     setHasGenerated(false);
     setWifiConfig({ ssid: '', password: '', encryption: 'WPA' });

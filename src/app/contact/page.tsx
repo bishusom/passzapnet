@@ -3,11 +3,11 @@ import type { Metadata } from 'next';
 import { Mail, MessageCircle, Clock, Send, CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Contact Us - PassZap Tools Support',
-  description: 'Get in touch with the PassZap team. We\'re here to help with any questions, feedback, or support needs.',
-  keywords: 'contact, support, help, feedback, PassZap contact',
+  title: 'Contact Us - FreeDevTools Studio Support',
+  description: 'Get in touch with the FreeDevTools Studio team. We\'re here to help with any questions, feedback, or support needs.',
+  keywords: 'contact, support, help, feedback, FreeDevTools Studio contact',
   alternates: {
-    canonical: 'https://passzap.net/contact',
+    canonical: 'https://freedevtools.studio/contact',
   },
 };
 
@@ -66,7 +66,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                      <p className="text-gray-700 text-sm">support@passzap.net</p>
+                      <p className="text-gray-700 text-sm">support@freedevtools.studio</p>
                     </div>
                   </div>
                 </div>

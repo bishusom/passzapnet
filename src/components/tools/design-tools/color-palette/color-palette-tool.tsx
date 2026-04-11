@@ -323,7 +323,7 @@ export default function ColorPaletteGenerator() {
     const paletteData = {
       colors: colors,
       generatedAt: new Date().toISOString(),
-      source: 'PassZap Color Palette Generator'
+      source: 'FreeDevTools Studio Color Palette Generator'
     };
 
     const dataStr = JSON.stringify(paletteData, null, 2);
