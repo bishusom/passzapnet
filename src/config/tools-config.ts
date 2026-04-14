@@ -4,7 +4,7 @@ import {
   FileCode, FileImage, RefreshCw, Eye, Terminal, Zap, 
   Crop, Type, Image, Shield, Database, Cpu, Wifi, Globe,
   Music, Video, BookOpen, Layers, Component, Scaling,
-  Pipette, Search, PaintBucket, Regex, Combine, Monitor
+  Pipette, Search, PaintBucket, Regex, Combine, Monitor, Calendar
 } from 'lucide-react';
 
 export interface ToolSEOConfig {
@@ -1215,6 +1215,78 @@ export const toolsConfig: Record<string, ToolConfig> = {
       keywords: 'docker cheat sheet, docker commands, container management, dockerfile, containerization',
       ogImage: '/og/docker-cheatsheet-og.png',
       canonical: 'https://freedevtools.studio/tools/cheatsheets/docker'
+    }
+  },
+  'calendar-viewer': {
+    id: 'calendar-viewer',
+    name: 'Calendar Viewer',
+    description: 'View full year calendar with current date mapping',
+    category: 'date-time-tools',
+    categoryName: 'Date & Time Tools',
+    icon: Calendar,
+    color: 'text-green-500',
+    bgColor: 'bg-green-50',
+    href: '/tools/date-time-tools/calendar-viewer',
+    seo: {
+      title: 'Calendar Viewer - View Full Year Calendar Online | FreeDevTools Studio',
+      description: 'Free online calendar viewer. Display a full 12-month calendar for any year and instantly check dates.',
+      keywords: 'calendar viewer, year calendar, online calendar, view dates',
+      ogImage: '/og-image.png',
+      canonical: 'https://freedevtools.studio/tools/date-time-tools/calendar-viewer'
+    }
+  },
+  'keycode-info': {
+    id: 'keycode-info',
+    name: 'JavaScript Keycode Info',
+    description: 'Get keyboard event key, code, and keyCode',
+    category: 'developer',
+    categoryName: 'Developer Tools',
+    icon: Code,
+    color: 'text-blue-500',
+    bgColor: 'bg-blue-50',
+    href: '/tools/developer/keycode-info',
+    seo: {
+      title: 'JavaScript Keycode Info - Event Key Viewer | FreeDevTools Studio',
+      description: 'Find out the JavaScript event key, code, and keyCode for any pressed keyboard key instantly in your browser.',
+      keywords: 'keycode info, js keycode, event key, javascript event codes, keyboard event',
+      ogImage: '/og-image.png',
+      canonical: 'https://freedevtools.studio/tools/developer/keycode-info'
+    }
+  },
+  'lorem-ipsum': {
+    id: 'lorem-ipsum',
+    name: 'Lorem Ipsum Generator',
+    description: 'Generate standard placeholder text formats',
+    category: 'design-tools',
+    categoryName: 'Design & UI Tools',
+    icon: Type,
+    color: 'text-pink-500',
+    bgColor: 'bg-pink-50',
+    href: '/tools/design-tools/lorem-ipsum',
+    seo: {
+      title: 'Lorem Ipsum Generator - Create Placeholder Text | FreeDevTools Studio',
+      description: 'Free online lorem ipsum generator. Produce standard dummy text in paragraphs, words, or sentences for your designs.',
+      keywords: 'lorem ipsum, placeholder text, dummy text generator, mock text',
+      ogImage: '/og-image.png',
+      canonical: 'https://freedevtools.studio/tools/design-tools/lorem-ipsum'
+    }
+  },
+  'base-converter': {
+    id: 'base-converter',
+    name: 'Base Number Converter',
+    description: 'Convert between decimal, binary, hex, and octal',
+    category: 'utilities',
+    categoryName: 'Utility Tools',
+    icon: Calculator,
+    color: 'text-emerald-500',
+    bgColor: 'bg-emerald-50',
+    href: '/tools/utilities/base-converter',
+    seo: {
+      title: 'Base Number Converter - Dec, Hex, Bin, Oct | FreeDevTools Studio',
+      description: 'Instantly convert numbers between decimal, hexadecimal, binary, and octal base systems.',
+      keywords: 'base converter, decimal to binary, hex converter, octal to decimal, number base tool',
+      ogImage: '/og-image.png',
+      canonical: 'https://freedevtools.studio/tools/utilities/base-converter'
     }
   }
 };
