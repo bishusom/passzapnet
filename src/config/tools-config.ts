@@ -4,7 +4,7 @@ import {
   FileCode, FileImage, RefreshCw, Eye, Terminal, Zap, 
   Crop, Type, Image, Shield, Database, Cpu, Wifi, Globe,
   Music, Video, BookOpen, Layers, Component, Scaling,
-  Pipette, Search, PaintBucket, Regex, Combine, Monitor, Calendar
+  Pipette, Search, PaintBucket, Regex, Combine, Monitor, Calendar, Flag, Package
 } from 'lucide-react';
 
 export interface ToolSEOConfig {
@@ -424,6 +424,78 @@ export const toolsConfig: Record<string, ToolConfig> = {
       keywords: 'markdown preview, markdown editor, md preview, render markdown, markdown tool',
       ogImage: '/og/markdown-preview-og.png',
       canonical: 'https://freedevtools.studio/tools/developer/markdown-preview'
+    }
+  },
+  'country-info': {
+    id: 'country-info',
+    name: 'Country Info',
+    description: 'Look up country facts, flags, and currencies',
+    category: 'developer',
+    categoryName: 'Developer Tools',
+    icon: Flag,
+    color: 'text-blue-500',
+    bgColor: 'bg-blue-50',
+    href: '/tools/developer/country-info',
+    seo: {
+      title: 'Country Info Tool - Lookup Country Facts | FreeDevTools Studio',
+      description: 'Free online country info tool. Look up country names, capitals, currencies, languages, borders, flags, and timezones using live public data.',
+      keywords: 'country info, country lookup, country facts, capital lookup, flag lookup, currency lookup',
+      ogImage: '/og/country-info-og.png',
+      canonical: 'https://freedevtools.studio/tools/developer/country-info'
+    }
+  },
+  'public-holidays': {
+    id: 'public-holidays',
+    name: 'Public Holidays',
+    description: 'Find holiday calendars for countries and years',
+    category: 'developer',
+    categoryName: 'Developer Tools',
+    icon: Calendar,
+    color: 'text-blue-500',
+    bgColor: 'bg-blue-50',
+    href: '/tools/developer/public-holidays',
+    seo: {
+      title: 'Public Holidays Tool - Country Holiday Calendar | FreeDevTools Studio',
+      description: 'Free online public holidays tool. Find national holidays by country and year, inspect upcoming holidays, and check today\'s holiday status.',
+      keywords: 'public holidays, holiday calendar, country holidays, holiday lookup, nager date',
+      ogImage: '/og/public-holidays-og.png',
+      canonical: 'https://freedevtools.studio/tools/developer/public-holidays'
+    }
+  },
+  'npm-package-inspector': {
+    id: 'npm-package-inspector',
+    name: 'NPM Package Inspector',
+    description: 'Inspect package metadata, versions, and dependencies',
+    category: 'developer',
+    categoryName: 'Developer Tools',
+    icon: Package,
+    color: 'text-blue-500',
+    bgColor: 'bg-blue-50',
+    href: '/tools/developer/npm-package-inspector',
+    seo: {
+      title: 'NPM Package Inspector - View Package Metadata | FreeDevTools Studio',
+      description: 'Free online NPM package inspector. View latest versions, dependencies, release dates, repository links, and package metadata from the npm registry.',
+      keywords: 'npm package inspector, package lookup, npm registry, dependency inspector, package metadata',
+      ogImage: '/og/npm-package-inspector-og.png',
+      canonical: 'https://freedevtools.studio/tools/developer/npm-package-inspector'
+    }
+  },
+  'dns-lookup': {
+    id: 'dns-lookup',
+    name: 'DNS Lookup',
+    description: 'Resolve DNS records for domains',
+    category: 'developer',
+    categoryName: 'Developer Tools',
+    icon: Wifi,
+    color: 'text-blue-500',
+    bgColor: 'bg-blue-50',
+    href: '/tools/developer/dns-lookup',
+    seo: {
+      title: 'DNS Lookup Tool - Inspect DNS Records | FreeDevTools Studio',
+      description: 'Free online DNS lookup tool. Query A, AAAA, CNAME, MX, TXT, NS, and SOA records using public DNS-over-HTTPS resolution.',
+      keywords: 'dns lookup, dns records, domain lookup, dig tool, dns resolver',
+      ogImage: '/og/dns-lookup-og.png',
+      canonical: 'https://freedevtools.studio/tools/developer/dns-lookup'
     }
   },
   'string-case-converter': {
