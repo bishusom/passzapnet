@@ -89,22 +89,13 @@ export default function ContactPage() {
               <div className="bg-white rounded-xl shadow-lg p-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
                 
-                {/* Netlify Form */}
+                {/* Formspree Form */}
                 <form
-                  name="contact"
+                  action="https://formspree.io/f/mojrqqbq"
                   method="POST"
-                  data-netlify="true"
-                  netlify-honeypot="bot-field"
+                  encType="multipart/form-data"
                   className="space-y-6"
                 >
-                  {/* Netlify Form Hidden Fields */}
-                  <input type="hidden" name="form-name" value="contact" />
-                  <p className="hidden">
-                    <label>
-                      Don't fill this out if you're human: <input name="bot-field" />
-                    </label>
-                  </p>
-
                   <div className="grid md:grid-cols-2 gap-6">
                     {/* Name */}
                     <div>
