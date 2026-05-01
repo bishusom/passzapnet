@@ -47,6 +47,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const isProduction = process.env.NODE_ENV === 'production';
+  const gaId = process.env.NEXT_GA_ID;
   
   return (
     <html lang="en">
@@ -73,7 +74,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        {isProduction && <GoogleAnalytics gaId="G-0EW9XLCKEX" />}
+        {isProduction && gaId && <GoogleAnalytics gaId={gaId} />}
       </body>
     </html>
   )
