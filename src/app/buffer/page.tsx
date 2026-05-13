@@ -3,21 +3,39 @@ import { Download, FileText, Github, MonitorDown, ShieldAlert, Terminal } from '
 
 const downloadUrl = '/downloads/Buffer.dmg'
 const sha256 = 'c8c91e3a19f4b79d2ed26cab48ff08e34d20cc897483396332968bd1c5129596'
+const pageUrl = 'https://freedevtools.studio/buffer'
+const pageTitle = 'Buffer for macOS - FreeDevTools Studio'
+const pageDescription =
+  'Download Buffer, a free open-source scratchpad editor for macOS that keeps notes, snippets, drafts, and temporary text ready between sessions.'
+const ogImageUrl = 'https://freedevtools.studio/og/buffer-og.png'
 
 export const metadata: Metadata = {
-  title: 'Buffer for macOS - FreeDevTools Studio',
-  description:
-    'Download Buffer, a free open-source persistent scratchpad editor for macOS.',
+  title: pageTitle,
+  description: pageDescription,
   alternates: {
-    canonical: 'https://freedevtools.studio/buffer',
+    canonical: pageUrl,
   },
   openGraph: {
-    title: 'Buffer for macOS',
-    description:
-      'A free open-source persistent scratchpad editor for macOS from FreeDevTools Studio.',
-    url: 'https://freedevtools.studio/buffer',
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
     siteName: 'FreeDevTools Studio',
+    images: [
+      {
+        url: ogImageUrl,
+        width: 1200,
+        height: 630,
+        alt: 'Buffer for macOS preview image',
+      },
+    ],
+    locale: 'en_US',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [ogImageUrl],
   },
 }
 
