@@ -48,6 +48,7 @@ export default function Footer() {
               <li><a href="/privacy-policy" className="hover:text-emerald-600 transition-colors">Privacy Policy</a></li>
               <li><a href="/terms-of-service" className="hover:text-emerald-600 transition-colors">Terms of Service</a></li>
               <li><a href="/faq" className="hover:text-emerald-600 transition-colors">FAQ</a></li>
+              <li><a href="/buffer" className="hover:text-emerald-600 transition-colors">Buffer for macOS</a></li>
             </ul>
           </div>
         </div>
@@ -58,7 +59,7 @@ export default function Footer() {
             © {currentYear} FreeDevTools Studio. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="https://github.com/bishusom" className="text-gray-400 hover:text-emerald-600 transition-colors">
+            <a href="https://github.com/bishusom/passzapnet" className="text-gray-400 hover:text-emerald-600 transition-colors">
               <Github className="h-5 w-5" />
             </a>
             <a href="https://x.com/bishusom" className="text-gray-400 hover:text-emerald-600 transition-colors">
