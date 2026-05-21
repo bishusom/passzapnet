@@ -151,9 +151,7 @@ export default function Header() {
             <a href="/tools" className="text-gray-600 hover:text-emerald-600 transition-colors font-medium py-2">
               All Tools
             </a>
-            <a href="/buffer" className="text-gray-600 hover:text-emerald-600 transition-colors font-medium py-2">
-              Buffer
-            </a>
+            
             
             {/* Categories Dropdown */}
             <div className="relative" ref={dropdownRef}>
@@ -262,14 +260,6 @@ export default function Header() {
               >
                 <Sparkles className="h-5 w-5 text-emerald-500" />
                 <span>All Tools</span>
-              </a>
-              <a
-                href="/buffer"
-                className="flex items-center space-x-3 text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 transition-colors font-medium py-3 px-4 rounded-lg"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <MonitorDown className="h-5 w-5 text-emerald-500" />
-                <span>Buffer</span>
               </a>
               
               <div className="border-b border-emerald-100 pb-3">
