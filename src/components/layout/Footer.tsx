@@ -48,7 +48,6 @@ export default function Footer() {
               <li><a href="/privacy-policy" className="hover:text-emerald-600 transition-colors">Privacy Policy</a></li>
               <li><a href="/terms-of-service" className="hover:text-emerald-600 transition-colors">Terms of Service</a></li>
               <li><a href="/faq" className="hover:text-emerald-600 transition-colors">FAQ</a></li>
-              <li><a href="/buffer" className="hover:text-emerald-600 transition-colors">Buffer for macOS</a></li>
             </ul>
           </div>
         </div>
