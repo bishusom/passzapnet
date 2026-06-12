@@ -28,7 +28,7 @@ export default function ToolClientWrapper({ toolId, category }: ToolClientWrappe
     return (
       <div className="flex items-center justify-center min-h-96">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-500 mx-auto"></div>
           <p className="mt-4 text-gray-600">Loading {toolConfig.name}...</p>
         </div>
       </div>
@@ -39,7 +39,7 @@ export default function ToolClientWrapper({ toolId, category }: ToolClientWrappe
     return (
       <div className="flex items-center justify-center min-h-96">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-red-600">Error Loading Tool</h1>
+          <h1 className="text-2xl font-bold text-green-700">Error Loading Tool</h1>
           <p className="text-gray-600">{error || `Failed to load ${toolConfig.name}`}</p>
         </div>
       </div>

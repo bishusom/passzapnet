@@ -4,7 +4,7 @@ import {
   FileCode, FileImage, RefreshCw, Eye, Terminal, Zap, 
   Crop, Type, Image, Shield, Database, Cpu, Wifi, Globe,
   Music, Video, BookOpen, Layers, Component, Scaling,
-  Pipette, Search, PaintBucket, Regex, Combine, Monitor, Calendar, Flag, Package
+  Pipette, Search, PaintBucket, Regex, Combine, Monitor, Calendar, Flag, Package, Lightbulb
 } from 'lucide-react';
 
 export interface ToolSEOConfig {
@@ -41,6 +41,14 @@ export interface CategoryConfig {
 
 // Categories configuration - merged from constants.ts
 export const categoriesConfig: Record<string, Omit<CategoryConfig, 'tools'>> = {
+  'ai-llm': {
+    id: 'ai-llm',
+    name: 'AI & LLM Tools',
+    description: 'Tools for AI models, LLM APIs, and token management',
+    icon: Lightbulb,
+    color: 'text-violet-500',
+    bgColor: 'bg-violet-50'
+  },
   'security': {
     id: 'security',
     name: 'Security & Privacy',
@@ -1360,14 +1368,102 @@ export const toolsConfig: Record<string, ToolConfig> = {
       ogImage: '/og-image.png',
       canonical: 'https://freedevtools.studio/tools/utilities/base-converter'
     }
+  },
+
+  // 🤖 AI & LLM Tools
+  'ai-token-calculator': {
+    id: 'ai-token-calculator',
+    name: 'AI Token Calculator',
+    description: 'Estimate token counts for LLM APIs',
+    category: 'ai-llm',
+    categoryName: 'AI & LLM Tools',
+    icon: Calculator,
+    color: 'text-violet-500',
+    bgColor: 'bg-violet-50',
+    href: '/tools/ai-llm/ai-token-calculator',
+    featured: true,
+    seo: {
+      title: 'AI Token Calculator - Estimate LLM Token Counts | FreeDevTools Studio',
+      description: 'Free online AI token calculator. Estimate token counts for OpenAI, Claude, Gemini, and other LLM APIs. Calculate tokens instantly.',
+      keywords: 'token calculator, token counter, openai tokens, llm tokens, prompt tokens, completion tokens',
+      ogImage: '/og/ai-token-calculator-og.png',
+      canonical: 'https://freedevtools.studio/tools/ai-llm/ai-token-calculator'
+    }
+  },
+  'llm-cost-calculator': {
+    id: 'llm-cost-calculator',
+    name: 'LLM Cost Calculator',
+    description: 'Calculate API costs based on token usage',
+    category: 'ai-llm',
+    categoryName: 'AI & LLM Tools',
+    icon: DollarSign,
+    color: 'text-violet-500',
+    bgColor: 'bg-violet-50',
+    href: '/tools/ai-llm/llm-cost-calculator',
+    featured: true,
+    seo: {
+      title: 'LLM Cost Calculator - Calculate API Costs | FreeDevTools Studio',
+      description: 'Free online LLM cost calculator. Calculate API expenses for OpenAI GPT, Claude, Gemini, and other models. Compare pricing across providers.',
+      keywords: 'llm cost calculator, api cost, openai pricing, claude pricing, token cost, api expenses',
+      ogImage: '/og/llm-cost-calculator-og.png',
+      canonical: 'https://freedevtools.studio/tools/ai-llm/llm-cost-calculator'
+    }
+  },
+  'prompt-template-generator': {
+    id: 'prompt-template-generator',
+    name: 'Prompt Template Generator',
+    description: 'Generate optimized prompt templates for common LLM tasks',
+    category: 'ai-llm',
+    categoryName: 'AI & LLM Tools',
+    icon: BookOpen,
+    color: 'text-violet-500',
+    bgColor: 'bg-violet-50',
+    href: '/tools/ai-llm/prompt-template-generator',
+    featured: true,
+    seo: {
+      title: 'Prompt Template Generator - LLM Prompt Optimization | FreeDevTools Studio',
+      description: 'Free online prompt template generator. Create optimized prompts for summarization, classification, code generation, and more. Improve LLM output quality.',
+      keywords: 'prompt template, prompt engineering, llm prompts, ai prompt generator, prompt optimization',
+      ogImage: '/og/prompt-template-generator-og.png',
+      canonical: 'https://freedevtools.studio/tools/ai-llm/prompt-template-generator'
+    }
+  },
+  'api-request-builder': {
+    id: 'api-request-builder',
+    name: 'API Request Builder',
+    description: 'Build and test LLM API requests with ease',
+    category: 'ai-llm',
+    categoryName: 'AI & LLM Tools',
+    icon: Code,
+    color: 'text-violet-500',
+    bgColor: 'bg-violet-50',
+    href: '/tools/ai-llm/api-request-builder',
+    featured: true,
+    seo: {
+      title: 'API Request Builder - Test LLM APIs | FreeDevTools Studio',
+      description: 'Free online LLM API request builder. Build, format, and test API requests for OpenAI, Claude, Gemini. View JSON payloads and mock responses.',
+      keywords: 'api request builder, llm api tester, openai api, api test tool, json payload builder',
+      ogImage: '/og/api-request-builder-og.png',
+      canonical: 'https://freedevtools.studio/tools/ai-llm/api-request-builder'
+    }
   }
 };
 
 // Helper functions
-export const getAllTools = (): ToolConfig[] => Object.values(toolsConfig);
+export const getAllTools = (): ToolConfig[] => {
+  const allTools: ToolConfig[] = [];
+  
+  // Iterate through categories in order and collect tools for each
+  Object.keys(categoriesConfig).forEach(categoryId => {
+    const categoryTools = Object.values(toolsConfig).filter(tool => tool.category === categoryId);
+    allTools.push(...categoryTools);
+  });
+  
+  return allTools;
+};
 
 export const getToolsByCategory = (category: string): ToolConfig[] => 
-  getAllTools().filter(tool => tool.category === category);
+  Object.values(toolsConfig).filter(tool => tool.category === category);
 
 export const getToolById = (id: string): ToolConfig | undefined => toolsConfig[id];
 
